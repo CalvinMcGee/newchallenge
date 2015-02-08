@@ -1,8 +1,11 @@
-+++
-date = "2015-02-05T21:05:16+01:00"
-title = "Idrottspsykologisk föreläsning"
-
-+++
+---
+date: "2015-02-05T21:05:16+01:00"
+title: "Idrottspsykologisk föreläsning"
+menu:
+  main:
+    parent: "tjanster"
+    weight: 10
+---
 Idrottspsykologisk föreläsning kan erbjudas för bland annat grupper, organisationer, föreningar och företag.
 Det finns en stor bredd över hur en föreläsning kan hjälpa individer att komma dra fördelar av dem. Här är exempel på teman som brukar vara aktuellt:
 

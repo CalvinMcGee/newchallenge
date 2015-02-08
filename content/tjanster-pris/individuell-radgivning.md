@@ -1,8 +1,11 @@
-+++
-date = "2015-02-05T21:04:45+01:00"
-title = "Individuell rådgivning"
-
-+++
+---
+date: "2015-02-05T21:04:45+01:00"
+title: "Individuell rådgivning"
+menu:
+  main:
+    parent: "tjanster"
+    weight: 0
+---
 Att använda sig av en idrottspsykologisk rådgivare bör ses som ett ytterligare sätt att träna på.
 Lika självklart som du tränar teknik, taktik, styrka och uthållighet bör du även träna mentalt.
 New Challenge arbetar utifrån ett salutogent perspektiv och fokuserar därmed på att förbättra färdigheter genom idrottspsykologiska tekniker.

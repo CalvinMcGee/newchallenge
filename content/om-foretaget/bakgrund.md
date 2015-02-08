@@ -1,8 +1,11 @@
-+++
-date = "2015-02-05T21:12:51+01:00"
-title = "Bakgrund"
-
-+++
+---
+date: "2015-02-05T21:12:51+01:00"
+title: "Bakgrund"
+menu:
+  main:
+    parent: "foretaget"
+    weight: 10
+---
 I hela livet har jag idrottat och är fortfarande aktiv inom ett par idrotter.
 Jag har erfarenheter både utav individuell- och lagsporter samt tävlingsidrott.
 Framförallt har handboll och golf varit en stor passion.
