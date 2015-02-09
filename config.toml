@@ -1,4 +1,4 @@
 baseurl = "http://calvinmcgee.github.io/newchallenge"
 title = "my new hugo site"
-theme = "herring-cove"
+theme = "newchallenge"
 canonifyurls = true
