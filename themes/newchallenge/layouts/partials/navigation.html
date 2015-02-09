@@ -12,7 +12,7 @@
       {{ $currentNode := . }}
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-          <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+          <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
             <a href="{{.Url}}">{{.Name}}</a>
             <ul class="dropdown">
               {{ range .Children }}
