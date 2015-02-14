@@ -1,0 +1,19 @@
+footer {
+  background: $secondary-color;
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.footer {
+  &__title {
+    color: $white;
+  }
+}

@@ -1,7 +1,18 @@
-//@import "settings";
-@import "normalize";
+@import
+  "normalize",
+  "settings";
 
-// Or selectively include components
+@import
+  "foundation/components/grid",
+  "foundation/components/top-bar",
+  "foundation/components/type";
+
+@import
+  "components/content",
+  "components/date",
+  "components/footer";
+
+/*
 @import
   "foundation/components/accordion",
   "foundation/components/alert-boxes",
@@ -37,3 +48,4 @@
   "foundation/components/type",
   "foundation/components/offcanvas",
   "foundation/components/visibility";
+*/
