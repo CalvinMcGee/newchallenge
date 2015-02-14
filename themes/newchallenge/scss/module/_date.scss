@@ -1,0 +1,26 @@
+.date {
+  display: inline;
+  float: left;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-left: ($column-gutter / 2);
+  padding-right: ($column-gutter / 2);
+  text-transform: uppercase;
+
+  &__wrapper {
+    border: solid 1px $secondary-color;
+    padding: .3em;
+  }
+
+  &__day, &__month, &__year {
+    display: block;
+    color: $secondary-color;
+    text-align: center;
+  }
+
+  &__month {}
+  &__day {
+    font-size: 1.5rem;
+  }
+  &__year {}
+}

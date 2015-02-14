@@ -4200,39 +4200,60 @@ blockquote p {
     font-size: 1rem;
   }
 }
-/* line 1, ../../scss/components/_content.scss */
+/* line 1, ../../scss/layout/_content.scss */
 .content {
   background: #FFFFFF;
 }
 
-/* line 1, ../../scss/components/_date.scss */
+/* line 1, ../../scss/module/_date.scss */
 .date {
-  border: solid 1px #00B29C;
-  display: inline-block;
-  padding: 1em;
+  display: inline;
+  float: left;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  text-transform: uppercase;
 }
-/* line 6, ../../scss/components/_date.scss */
+/* line 10, ../../scss/module/_date.scss */
+.date__wrapper {
+  border: solid 1px #00B29C;
+  padding: .3em;
+}
+/* line 15, ../../scss/module/_date.scss */
 .date__day, .date__month, .date__year {
   display: block;
   color: #00B29C;
   text-align: center;
 }
+/* line 22, ../../scss/module/_date.scss */
+.date__day {
+  font-size: 1.5rem;
+}
 
-/* line 1, ../../scss/components/_footer.scss */
+/* line 1, ../../scss/module/_event.scss */
+.event {
+  display: inline;
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+/* line 1, ../../scss/layout/_footer.scss */
 footer {
   background: #00B29C;
   color: #FFFFFF;
 }
-/* line 5, ../../scss/components/_footer.scss */
+/* line 5, ../../scss/layout/_footer.scss */
 footer a {
   color: #FFFFFF;
 }
-/* line 8, ../../scss/components/_footer.scss */
+/* line 8, ../../scss/layout/_footer.scss */
 footer a:hover, footer a:focus {
   color: #FFFFFF;
 }
 
-/* line 16, ../../scss/components/_footer.scss */
+/* line 16, ../../scss/layout/_footer.scss */
 .footer__title {
   color: #FFFFFF;
 }

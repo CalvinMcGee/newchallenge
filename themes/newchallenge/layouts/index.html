@@ -10,15 +10,25 @@
   <div class="row">
     <div class="small-12 medium-6 columns">
       <h2>Företaget</h2>
+      {{ range first 1 (where .Data.Pages "Section" "index") }}
+        {{ .Content }}
+      {{ end }}
     </div>
     <div class="small-12 medium-6 columns">
       <h2>Aktuellt</h2>
       {{ range first 5 (where .Data.Pages "Section" "event") }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <div class="date">
-          <span class="date__day">{{ .Date.Format "02" }}</span>
-          <span class="date__month">{{ .Date.Format "Jan" }}</span>
-          <span class="date__year">{{ .Date.Format "2006" }}</span>
+        <div class="row">
+          <div class="date">
+            <div class="date__wrapper">
+              <span class="date__month">{{ .Date.Format "Jan" }}</span>
+              <span class="date__day">{{ .Date.Format "02" }}</span>
+              <span class="date__year">{{ .Date.Format "2006" }}</span>
+            </div>
+          </div>
+          <div class="event">
+            <h3>{{ .Title }}</h3>
+            {{ .Content }}
+          </div>
         </div>
       {{ end }}
     </div>
