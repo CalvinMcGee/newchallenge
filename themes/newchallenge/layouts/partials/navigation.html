@@ -15,7 +15,7 @@
           <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
             <a href="#">{{.Name}}</a>
             <ul class="dropdown">
-              <li><a href="{{ .Url }}">{{.Name}}</a></li>
+              <li {{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{ .Url }}">{{.Name}}</a></li>
               {{ range .Children }}
                 <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
                   <a href="{{.Url}}">- {{.Name}}</a>
