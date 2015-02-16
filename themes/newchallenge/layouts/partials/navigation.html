@@ -1,4 +1,4 @@
-<nav class="top-bar" data-topbar role="navigation" data-options="custom_back_text:true;back_text:Tillbaka;mobile_show_parent_link:true">
+<nav class="top-bar" data-topbar role="navigation" data-options="custom_back_text:true;back_text:Tillbaka;mobile_show_parent_link:false">
   <ul class="title-area">
     <li class="name">
       <h1><a href="/">{{ .Site.Title }}</a></h1>
@@ -13,9 +13,9 @@
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
-            <a href="{{.Url}}">{{.Name}}</a>
+            <a href="#">{{.Name}}</a>
             <ul class="dropdown">
-              <li><label>{{.Name}}</label></li>
+              <li><a href="{{ .Url }}">{{.Name}}</a></li>
               {{ range .Children }}
                 <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
                   <a href="{{.Url}}">{{.Name}}</a>
