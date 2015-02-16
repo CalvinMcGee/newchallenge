@@ -18,14 +18,14 @@
       <h2>Aktuellt</h2>
       {{ range first 5 (where .Data.Pages "Section" "event") }}
         <div class="row event">
-          <div class="date small-3 large-2 columns">
+          <div class="date">
             <div class="date__wrapper">
               <span class="date__month">{{ .Date.Format "Jan" }}</span>
               <span class="date__day">{{ .Date.Format "02" }}</span>
               <span class="date__year">{{ .Date.Format "2006" }}</span>
             </div>
           </div>
-          <div class="event__content small-9 large-10 columns">
+          <div class="event__content">
             <h3>{{ .Title }}</h3>
             {{ .Content }}
           </div>
