@@ -4218,7 +4218,7 @@ blockquote p {
 /* line 10, ../../scss/module/_date.scss */
 .date__wrapper {
   border: solid 1px #00B29C;
-  padding: .3em;
+  padding: .3rem;
 }
 /* line 15, ../../scss/module/_date.scss */
 .date__day, .date__month, .date__year {
@@ -4233,6 +4233,10 @@ blockquote p {
 
 /* line 1, ../../scss/module/_event.scss */
 .event {
+  padding-bottom: 1rem;
+}
+/* line 4, ../../scss/module/_event.scss */
+.event__content {
   display: inline;
   float: left;
   padding-left: 0.9375rem;
