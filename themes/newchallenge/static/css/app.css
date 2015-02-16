@@ -4207,26 +4207,22 @@ blockquote p {
 
 /* line 1, ../../scss/module/_date.scss */
 .date {
-  display: inline;
-  float: left;
   font-weight: 700;
   line-height: 1.2;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
   text-transform: uppercase;
 }
-/* line 10, ../../scss/module/_date.scss */
+/* line 6, ../../scss/module/_date.scss */
 .date__wrapper {
   border: solid 1px #00B29C;
   padding: .3rem;
 }
-/* line 15, ../../scss/module/_date.scss */
+/* line 11, ../../scss/module/_date.scss */
 .date__day, .date__month, .date__year {
   display: block;
   color: #00B29C;
   text-align: center;
 }
-/* line 22, ../../scss/module/_date.scss */
+/* line 18, ../../scss/module/_date.scss */
 .date__day {
   font-size: 1.5rem;
 }
@@ -4234,13 +4230,6 @@ blockquote p {
 /* line 1, ../../scss/module/_event.scss */
 .event {
   padding-bottom: 1rem;
-}
-/* line 4, ../../scss/module/_event.scss */
-.event__content {
-  display: inline;
-  float: left;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
 }
 
 /* line 1, ../../scss/layout/_footer.scss */
