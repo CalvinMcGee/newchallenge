@@ -17,7 +17,7 @@
     <div class="small-12 medium-6 columns">
       <h2>Aktuellt</h2>
       {{ range first 5 (where .Data.Pages "Section" "event") }}
-        <div class="row">
+        <div class="row event">
           <div class="date">
             <div class="date__wrapper">
               <span class="date__month">{{ .Date.Format "Jan" }}</span>
@@ -25,7 +25,7 @@
               <span class="date__year">{{ .Date.Format "2006" }}</span>
             </div>
           </div>
-          <div class="event">
+          <div class="event__content">
             <h3>{{ .Title }}</h3>
             {{ .Content }}
           </div>
