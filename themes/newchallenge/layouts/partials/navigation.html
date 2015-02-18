@@ -1,34 +1,36 @@
-<nav class="top-bar" data-topbar role="navigation" data-options="custom_back_text:true;back_text:Tillbaka;mobile_show_parent_link:false">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="/">{{ .Site.Title }}</a></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Meny</span></a></li>
-  </ul>
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      {{ $currentNode := . }}
-      {{ range .Site.Menus.main }}
-        {{ if .HasChildren }}
-          <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
-            <a href="#">{{.Name}}</a>
-            <ul class="dropdown">
-              <li {{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{ .Url }}">{{.Name}}</a></li>
-              {{ range .Children }}
-                <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
-                  <a href="{{.Url}}">- {{.Name}}</a>
-                </li>
-              {{end}}
-            </ul>
-          </li>
-        {{else}}
-          <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
-            <a href="{{.Url}}">{{.Name}}</a>
-          </li>
-        {{end}}
-      {{end}}
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar role="navigation" data-options="custom_back_text:true;back_text:Tillbaka;mobile_show_parent_link:false">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
+      </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Meny</span></a></li>
     </ul>
-  </section>
-</nav>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+            <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+              <a href="#">{{.Name}}</a>
+              <ul class="dropdown">
+                <li {{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{ .Url }}">{{.Name}}</a></li>
+                {{ range .Children }}
+                  <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
+                    <a href="{{.Url}}">- {{.Name}}</a>
+                  </li>
+                {{end}}
+              </ul>
+            </li>
+          {{else}}
+            <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
+              <a href="{{.Url}}">{{.Name}}</a>
+            </li>
+          {{end}}
+        {{end}}
+      </ul>
+    </section>
+  </nav>
+</div>
