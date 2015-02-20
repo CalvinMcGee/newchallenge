@@ -2866,11 +2866,6 @@ nav section ul li.active > a:hover {
   nav section ul li a {
     padding: 0 0.9375rem;
     line-height: 2.8125rem;
-    background: #333333;
-  }
-  /* line 122, ../../scss/module/_navigation.scss */
-  nav section ul li a:hover {
-    background-color: #333333;
   }
   /* line 129, ../../scss/module/_navigation.scss */
   nav section ul .has-dropdown {
@@ -2925,6 +2920,10 @@ nav section ul li.active > a:hover {
   nav section ul .dropdown li {
     width: 100%;
     height: auto;
+  }
+  /* line 168, ../../scss/module/_navigation.scss */
+  nav section ul .dropdown li a {
+    white-space: nowrap;
   }
 }
 /* line 1, ../../scss/layout/_footer.scss */
