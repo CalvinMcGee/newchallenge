@@ -2776,7 +2776,7 @@ nav .toggle-topbar {
 /* line 41, ../../scss/module/_navigation.scss */
 nav .toggle-topbar a {
   color: #FFFFFF;
-  text-transform: uppervase;
+  text-transform: uppercase;
   font-weight: bold;
   position: relative;
   display: block;
