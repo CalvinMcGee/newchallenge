@@ -2807,12 +2807,12 @@ nav section ul li > a:hover {
 }
 /* line 76, ../../scss/module/_navigation.scss */
 nav section ul li.active > a {
-  background: #FFFFFF;
+  background: #333333;
   color: #FFFFFF;
 }
 /* line 80, ../../scss/module/_navigation.scss */
 nav section ul li.active > a:hover {
-  background: #FFFFFF;
+  background: #333333;
   color: #FFFFFF;
 }
 

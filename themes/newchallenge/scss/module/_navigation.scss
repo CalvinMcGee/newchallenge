@@ -74,11 +74,11 @@ nav {
         }
 
         &.active > a {
-          background: $white;
-          color: $menu-link-color;
+          background: $menu-link-active-bg;
+          color: $menu-link-active-color;
 
           &:hover {
-            background: $white;
+            background: $menu-link-active-bg;
             color: $menu-link-active-color;
           }
         }
@@ -118,9 +118,9 @@ nav {
             padding: 0 $menu-link-padding;
             line-height: $menu-height;
   //          color: $menu-link-color;
-            background: $menu-bg;
+            background: $menu-link-bg;
             &:hover {
-              background-color: $menu-bg;
+              background-color: $menu-link-active-bg;
   //            color: $menu-link-active-color;
             }
           }
