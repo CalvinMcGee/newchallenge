@@ -117,11 +117,11 @@ nav {
           a{
             padding: 0 $menu-link-padding;
             line-height: $menu-height;
-  //          color: $menu-link-color;
-            background: $menu-link-bg;
+//          color: $menu-link-color;
+//          background: $menu-link-bg;
             &:hover {
-              background-color: $menu-link-active-bg;
-  //            color: $menu-link-active-color;
+//            background-color: $menu-link-active-bg;
+//            color: $menu-link-active-color;
             }
           }
         }
