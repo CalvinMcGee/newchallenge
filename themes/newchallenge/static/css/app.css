@@ -2745,37 +2745,79 @@ nav {
   background: #333333;
 }
 /* line 14, ../../scss/module/_navigation.scss */
-nav ul {
+nav .title-area {
+  position: relative;
+  margin: 0;
+}
+/* line 19, ../../scss/module/_navigation.scss */
+nav .name {
+  height: 2.8125rem;
+  margin: 0;
+}
+/* line 23, ../../scss/module/_navigation.scss */
+nav .name h1, nav .name h2, nav .name h3, nav .name h4, nav .name p, nav .name span {
+  line-height: 2.8125rem;
+  font-size: 1.0625rem;
+  margin: 0;
+}
+/* line 27, ../../scss/module/_navigation.scss */
+nav .name h1 a, nav .name h2 a, nav .name h3 a, nav .name h4 a, nav .name p a, nav .name span a {
+  color: #FFFFFF;
+  width: 75%;
   display: block;
+  padding: 0 0.9375rem;
+}
+/* line 36, ../../scss/module/_navigation.scss */
+nav .toggle-topbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 41, ../../scss/module/_navigation.scss */
+nav .toggle-topbar a {
+  color: #FFFFFF;
+  text-transform: uppervase;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  padding: 0 0.9375rem;
+  height: 2.8125rem;
+  line-height: 2.8125rem;
+}
+/* line 54, ../../scss/module/_navigation.scss */
+nav ul {
   margin-bottom: 0;
-  margin-left: 0;
   list-style: none;
 }
-/* line 21, ../../scss/module/_navigation.scss */
-nav ul li > a {
+/* line 60, ../../scss/module/_navigation.scss */
+nav section ul {
+  display: block;
+}
+/* line 64, ../../scss/module/_navigation.scss */
+nav section ul li > a {
   color: #FFFFFF;
   display: block;
   font-size: 0.8125rem;
   padding: 12px 0 12px 0;
 }
-/* line 27, ../../scss/module/_navigation.scss */
-nav ul li > a:hover {
+/* line 70, ../../scss/module/_navigation.scss */
+nav section ul li > a:hover {
   background: #333333;
   color: #FFFFFF;
 }
-/* line 33, ../../scss/module/_navigation.scss */
-nav ul li.active > a {
+/* line 76, ../../scss/module/_navigation.scss */
+nav section ul li.active > a {
   background: #FFFFFF;
   color: #FFFFFF;
 }
-/* line 37, ../../scss/module/_navigation.scss */
-nav ul li.active > a:hover {
+/* line 80, ../../scss/module/_navigation.scss */
+nav section ul li.active > a:hover {
   background: #FFFFFF;
   color: #FFFFFF;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 47, ../../scss/module/_navigation.scss */
+  /* line 91, ../../scss/module/_navigation.scss */
   nav {
     overflow: visible;
   }
@@ -2788,32 +2830,54 @@ nav ul li.active > a:hover {
   nav:after {
     clear: both;
   }
-  /* line 51, ../../scss/module/_navigation.scss */
-  nav ul {
+  /* line 95, ../../scss/module/_navigation.scss */
+  nav .title-area {
+    float: left;
+  }
+  /* line 96, ../../scss/module/_navigation.scss */
+  nav .name h1 a,
+  nav .name h2 a,
+  nav .name h3 a,
+  nav .name h4 a,
+  nav .name h5 a,
+  nav .name h6 a {
+    width: auto;
+  }
+  /* line 103, ../../scss/module/_navigation.scss */
+  nav .toggle-topbar {
+    display: none;
+  }
+  /* line 105, ../../scss/module/_navigation.scss */
+  nav section {
+    left: 0 !important;
+  }
+  /* line 108, ../../scss/module/_navigation.scss */
+  nav section ul {
+    float: right;
     width: auto;
     height: auto !important;
     display: inline;
   }
-  /* line 56, ../../scss/module/_navigation.scss */
-  nav ul li {
+  /* line 114, ../../scss/module/_navigation.scss */
+  nav section ul li {
     float: left;
   }
-  /* line 59, ../../scss/module/_navigation.scss */
-  nav ul li a {
+  /* line 117, ../../scss/module/_navigation.scss */
+  nav section ul li a {
     padding: 0 0.9375rem;
     line-height: 2.8125rem;
     background: #333333;
   }
-  /* line 64, ../../scss/module/_navigation.scss */
-  nav ul li a:hover {
+  /* line 122, ../../scss/module/_navigation.scss */
+  nav section ul li a:hover {
     background-color: #333333;
   }
-  /* line 71, ../../scss/module/_navigation.scss */
-  nav ul .has-dropdown {
+  /* line 129, ../../scss/module/_navigation.scss */
+  nav section ul .has-dropdown {
     position: relative;
   }
-  /* line 75, ../../scss/module/_navigation.scss */
-  nav ul .has-dropdown:hover > .dropdown {
+  /* line 133, ../../scss/module/_navigation.scss */
+  nav section ul .has-dropdown:hover > .dropdown {
     display: block;
     position: static !important;
     height: auto;
@@ -2822,12 +2886,12 @@ nav ul li.active > a:hover {
     clip: auto;
     position: absolute !important;
   }
-  /* line 82, ../../scss/module/_navigation.scss */
-  nav ul .has-dropdown > a {
+  /* line 140, ../../scss/module/_navigation.scss */
+  nav section ul .has-dropdown > a {
     padding-right: 2.1875rem;
   }
-  /* line 84, ../../scss/module/_navigation.scss */
-  nav ul .has-dropdown > a:after {
+  /* line 142, ../../scss/module/_navigation.scss */
+  nav section ul .has-dropdown > a:after {
     content: "";
     display: block;
     width: 0;
@@ -2841,8 +2905,8 @@ nav ul li.active > a:hover {
     margin-top: -2.5px;
     top: 1.40625rem;
   }
-  /* line 95, ../../scss/module/_navigation.scss */
-  nav ul .dropdown {
+  /* line 153, ../../scss/module/_navigation.scss */
+  nav section ul .dropdown {
     display: block;
     padding: 0;
     position: absolute;
@@ -2857,8 +2921,8 @@ nav ul li.active > a:hover {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
   }
-  /* line 106, ../../scss/module/_navigation.scss */
-  nav ul .dropdown li {
+  /* line 164, ../../scss/module/_navigation.scss */
+  nav section ul .dropdown li {
     width: 100%;
     height: auto;
   }

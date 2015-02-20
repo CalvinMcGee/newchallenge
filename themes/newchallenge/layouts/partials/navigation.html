@@ -1,23 +1,33 @@
 <nav>
-  <ul class="menu">
-    {{ $currentNode := . }}
-    {{ range .Site.Menus.main }}
-      {{ if .HasChildren }}
-        <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
-          <a href="{{ .Url }}">{{.Name}}</a>
-          <ul class="dropdown">
-            {{ range .Children }}
-              <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
-                <a href="{{.Url}}">{{.Name}}</a>
-              </li>
-            {{end}}
-          </ul>
-        </li>
-      {{else}}
-        <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
-          <a href="{{.Url}}">{{.Name}}</a>
-        </li>
-      {{end}}
-    {{end}}
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">{{ .Site.Title }}</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon">
+      <a href="#">Meny</a>
+    </li>
   </ul>
+  <section>
+    <ul>
+      {{ $currentNode := . }}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="has-dropdown{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+            <a href="{{ .Url }}">{{.Name}}</a>
+            <ul class="dropdown">
+              {{ range .Children }}
+                <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
+                  <a href="{{.Url}}">{{.Name}}</a>
+                </li>
+              {{end}}
+            </ul>
+          </li>
+        {{else}}
+          <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}>
+            <a href="{{.Url}}">{{.Name}}</a>
+          </li>
+        {{end}}
+      {{end}}
+    </ul>
+  </section>
 </nav>

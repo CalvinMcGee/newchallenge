@@ -11,32 +11,76 @@ nav {
   position: relative;
   background: $menu-bg;
 
-  ul {
-    display: block;
-    margin-bottom: 0;
-    margin-left: 0;
-    list-style: none;
+  .title-area {
+    position: relative;
+    margin: 0;
+  }
 
-    li {
-      & > a {
+  .name {
+    height: $menu-height;
+    margin: 0;
+
+    h1, h2, h3, h4, p, span {
+      line-height: $menu-height;
+      font-size: rem-calc(17);
+      margin: 0;
+      a {
         color: $menu-link-color;
+        width: 75%;
         display: block;
-        font-size: rem-calc(13);
-        padding: 12px 0 12px 0;
-
-        &:hover {
-          background: $menu-link-active-bg;
-          color: $menu-link-active-color;
-        }
+        padding: 0 $menu-link-padding;
       }
+    }
+  }
 
-      &.active > a {
-        background: $white;
+  .toggle-topbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+      a {
         color: $menu-link-color;
+        text-transform: uppervase;
+//        font-size: $topbar-menu-link-font-size;
+        font-weight: bold;
+        position: relative;
+        display: block;
+        padding: 0 $menu-link-padding;
+        height: $menu-height;
+        line-height: $menu-height;
+      }
+  }
 
-        &:hover {
+  ul {
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+  section {
+    ul {
+      display: block;
+
+      li {
+        & > a {
+          color: $menu-link-color;
+          display: block;
+          font-size: rem-calc(13);
+          padding: 12px 0 12px 0;
+
+          &:hover {
+            background: $menu-link-active-bg;
+            color: $menu-link-active-color;
+          }
+        }
+
+        &.active > a {
           background: $white;
-          color: $menu-link-active-color;
+          color: $menu-link-color;
+
+          &:hover {
+            background: $white;
+            color: $menu-link-active-color;
+          }
         }
       }
     }
@@ -48,64 +92,79 @@ nav {
     @include clearfix;
     overflow: visible;
 
-    ul {
-      width: auto;
-      height: auto !important;
-      display: inline;
+    .title-area { float: left; }
+    .name h1 a,
+    .name h2 a,
+    .name h3 a,
+    .name h4 a,
+    .name h5 a,
+    .name h6 a { width: auto; }
 
-      li {
-        float: left;
+    .toggle-topbar { display: none; }
+    
+    section {
+      left: 0 !important;
 
-        a{
-          padding: 0 $menu-link-padding;
-          line-height: $menu-height;
-//          color: $menu-link-color;
-          background: $menu-bg;
-          &:hover {
-            background-color: $menu-bg;
-//            color: $menu-link-active-color;
-          }
-        }
-      }
-
-      .has-dropdown {
-        position: relative;
-
-        &:hover {
-          & > .dropdown {
-            display: block;
-            @include element-invisible-off();
-            position: absolute !important;
-          }
-        }
-
-        & > a {
-          padding-right: ($menu-link-padding + rem-calc(20));
-          &:after {
-            @include css-triangle(5px, rgba($menu-link-color, 0.4), top);
-            margin-right: $menu-link-padding;
-            position: absolute;
-            right: 0;
-            margin-top: -2.5px;
-            top: ($menu-height / 2);
-          }
-        }
-      }
-
-      .dropdown {
-        display: block;
-        padding: 0;
-        position: absolute;
-        right: 0;
-        top: auto;
-        left: auto;
-        overflow: hidden;
-        z-index: 99;
-        @include element-invisible();
+      ul {
+        float: right;
+        width: auto;
+        height: auto !important;
+        display: inline;
 
         li {
-          width: 100%;
-          height: auto;
+          float: left;
+
+          a{
+            padding: 0 $menu-link-padding;
+            line-height: $menu-height;
+  //          color: $menu-link-color;
+            background: $menu-bg;
+            &:hover {
+              background-color: $menu-bg;
+  //            color: $menu-link-active-color;
+            }
+          }
+        }
+
+        .has-dropdown {
+          position: relative;
+
+          &:hover {
+            & > .dropdown {
+              display: block;
+              @include element-invisible-off();
+              position: absolute !important;
+            }
+          }
+
+          & > a {
+            padding-right: ($menu-link-padding + rem-calc(20));
+            &:after {
+              @include css-triangle(5px, rgba($menu-link-color, 0.4), top);
+              margin-right: $menu-link-padding;
+              position: absolute;
+              right: 0;
+              margin-top: -2.5px;
+              top: ($menu-height / 2);
+            }
+          }
+        }
+
+        .dropdown {
+          display: block;
+          padding: 0;
+          position: absolute;
+          right: 0;
+          top: auto;
+          left: auto;
+          overflow: hidden;
+          z-index: 99;
+          @include element-invisible();
+
+          li {
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }
