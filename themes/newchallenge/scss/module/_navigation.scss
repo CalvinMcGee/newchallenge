@@ -9,6 +9,11 @@ $menu-link-hover-color: $menu-link-color;
 $menu-link-active-bg-hover: scale-color($primary-color, $lightness: -14%);
 $menu-link-padding: ($menu-height / 3);
 
+.contain-to-grid {
+  width: 100%;
+  background: $menu-bg;
+}
+
 nav {
   overflow: hidden;
   position: relative;
@@ -107,6 +112,11 @@ nav {
 }
 
 @media #{$medium-up} {
+  .contain-to-grid nav {
+    max-width: $row-width;
+    margin: 0 auto;
+  }
+
   nav {
     @include clearfix;
     overflow: visible;
