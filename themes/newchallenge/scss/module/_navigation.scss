@@ -1,15 +1,19 @@
 $menu-bg: $oil;
 $menu-height: rem-calc(45);
 $menu-link-bg: $oil;
-$menu-link-active-bg: $oil;
 $menu-link-color: $white;
+$menu-link-active-bg: $primary-color;
 $menu-link-active-color: $white;
+$menu-link-hover-bg: $menu-link-bg;
+$menu-link-hover-color: $menu-link-color;
+$menu-link-active-bg-hover: scale-color($primary-color, $lightness: -14%);
 $menu-link-padding: ($menu-height / 3);
 
 nav {
   overflow: hidden;
   position: relative;
   background: $menu-bg;
+  height: $menu-height;
 
   .title-area {
     position: relative;
@@ -52,8 +56,14 @@ nav {
   }
 
   ul {
-    margin-bottom: 0;
+    margin: 0;
     list-style: none;
+
+    li {
+      ul {
+        margin: 0;
+      }
+    }
   }
 
   section {
@@ -62,14 +72,16 @@ nav {
 
       li {
         & > a {
+          background: $menu-link-bg;
           color: $menu-link-color;
           display: block;
           font-size: rem-calc(13);
           padding: 12px 0 12px 0;
+          padding-left: $menu-link-padding;
 
           &:hover {
-            background: $menu-link-active-bg;
-            color: $menu-link-active-color;
+            background: $menu-link-hover-bg;
+            color: $menu-link-hover-color;
           }
         }
 
@@ -78,12 +90,19 @@ nav {
           color: $menu-link-active-color;
 
           &:hover {
-            background: $menu-link-active-bg;
-            color: $menu-link-active-color;
+            background: $menu-link-active-bg-hover;
+            color: $menu-link-hover-color;
           }
         }
       }
     }
+  }
+
+  &.expanded {
+    height: auto;
+    background: transparent;
+
+    .title-area { background: $menu-bg; }
   }
 }
 
@@ -101,7 +120,7 @@ nav {
     .name h6 a { width: auto; }
 
     .toggle-topbar { display: none; }
-    
+
     section {
       left: 0 !important;
 
@@ -120,8 +139,8 @@ nav {
             color: $menu-link-color;
             background: $menu-link-bg;
             &:hover {
-              background-color: $menu-link-active-bg;
-              color: $menu-link-active-color;
+              background-color: $menu-link-hover-bg;
+              color: $menu-link-hover-color;
             }
           }
         }
@@ -169,6 +188,10 @@ nav {
               white-space: nowrap;
             }
           }
+        }
+
+        .hide-for-medium-up {
+          display: none;
         }
       }
     }
