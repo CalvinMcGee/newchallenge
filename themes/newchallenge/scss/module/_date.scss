@@ -1,17 +1,11 @@
 .date {
-  display: inline;
-  float: left;
+  border: solid 1px $secondary-color;
+  display: inline-block;
   font-weight: 700;
   line-height: 1.2;
-  padding-left: ($column-gutter / 2);
-  padding-right: ($column-gutter / 2);
-  position: relative;
+  margin-top: .8rem;
   text-transform: uppercase;
-
-  &__wrapper {
-    border: solid 1px $secondary-color;
-    padding: .3rem;
-  }
+  padding: .3rem;
 
   &__day, &__month, &__year {
     display: block;

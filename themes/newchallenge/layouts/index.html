@@ -17,20 +17,26 @@
     <div class="small-12 medium-6 columns">
       <h2>Aktuellt</h2>
       {{ range first 5 (where .Data.Pages "Section" "event") }}
-        <div class="row event">
-          <div class="date">
-            <div class="date__wrapper">
+        <div class="row">
+          <div class="small-3 medium-2 columns">
+            <div class="date">
               <span class="date__month">{{ .Date.Format "Jan" }}</span>
               <span class="date__day">{{ .Date.Format "02" }}</span>
               <span class="date__year">{{ .Date.Format "2006" }}</span>
             </div>
           </div>
-          <div class="event__content">
-            <h3>{{ .Title }}</h3>
+          <div class="event__content small-9 medium-10 columns clearfix">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
             {{ .Content }}
+            <div>
+              <a class="button small radius right" href="{{ .Permalink }}">Läs mer</a>
+            </div>
           </div>
         </div>
       {{ end }}
+      <div>
+        <a class="button radius" href="/event">Läs alla nyheter</a>
+      </div>
     </div>
   </div>
 </div>

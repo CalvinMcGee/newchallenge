@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<img src="http://placekitten.com/1920/480" />
+{{ partial "navigation.html" . }}
+<div class="content">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <div class="small-2 medium-1 columns">
+          <div class="date">
+            <span class="date__month">{{ .Date.Format "Jan" }}</span>
+            <span class="date__day">{{ .Date.Format "02" }}</span>
+            <span class="date__year">{{ .Date.Format "2006" }}</span>
+          </div>
+        </div>
+        <div class="small-10 medium-11 columns">
+          <h1>{{ .Title }}</h1>
+        </div>
+      </div>
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
