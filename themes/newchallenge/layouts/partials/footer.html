@@ -5,7 +5,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="small-12 columns">
+        <div class="small-12 medium-4 columns">
           <span itemprop="name"><span itemprop="givenName">Marcus</span> <span itemprop="familyName">Nyqvist</span></span><br>
           <a href="mailto:newchallengesweden@gmail.com" itemprop="email">newchallengesweden@gmail.com</a><br>
           <span itemprop="telephone">0735-83 33 29</span><br>
@@ -15,6 +15,28 @@
           <a href="#">
             <img src="/img/rss-feed.svg" width="100px" alt="RSS" />
           </a>
+        </div>
+        <div class="small-12 medium-8 columns">
+          <ul>
+            {{ range .Site.Menus.main }}
+              {{ if .HasChildren }}
+                <li>
+                  <a href="{{ .Url }}">{{.Name}}</a>
+                  <ul>
+                    {{ range .Children }}
+                    <li>
+                      <a href="{{ .Url }}">{{.Name}}</a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                </li>
+              {{ else}}
+                <li>
+                  <a href="{{ .Url }}">{{.Name}}</a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
         </div>
       </div>
     </footer>
