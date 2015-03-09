@@ -17,25 +17,25 @@
           </a>
         </div>
         <div class="small-12 medium-8 columns">
-          <ul>
-            <li>
-              <a href="/">Hem</a>
+          <ul class="sitemap clearfix">
+            <li class="sitemap__item">
+              <a class="sitemap__link" href="/">Hem</a>
             </li>
             {{ range .Site.Menus.main }}
               {{ if .HasChildren }}
-                <li>
-                  <a href="{{ .Url }}">{{.Name}}</a>
-                  <ul>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="{{ .Url }}">{{.Name}}</a>
+                  <ul class="sitemap__sub">
                     {{ range .Children }}
-                    <li>
-                      <a href="{{ .Url }}">{{.Name}}</a>
+                    <li class="sitemap__subitem">
+                      <a class="sitemap__sublink" href="{{ .Url }}">{{.Name}}</a>
                     </li>
                     {{ end }}
                   </ul>
                 </li>
               {{ else}}
-                <li>
-                  <a href="{{ .Url }}">{{.Name}}</a>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="{{ .Url }}">{{.Name}}</a>
                 </li>
               {{ end }}
             {{ end }}

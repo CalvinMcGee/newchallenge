@@ -1,0 +1,41 @@
+.sitemap {
+  margin: 0;
+  list-style: none;
+
+  &__link {
+    display: block;
+  }
+
+  &__sub {
+    list-style: none;
+    margin: 0;
+  }
+
+  &__sublink {
+    display: block;
+    padding-left: 1.25rem;
+  }
+}
+
+@media #{$large-up} {
+  .sitemap {
+    float: right;
+
+    &__item {
+      display: inline;
+      float: left;
+      margin: 0 1rem;
+      position: relative;
+    }
+    &__sub {
+      margin: 0;
+    }
+    &__subitem {
+      display: block;
+    }
+
+    &__sublink {
+      padding: 0;
+    }
+  }
+}
