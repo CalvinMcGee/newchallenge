@@ -4,9 +4,9 @@ title: "Sponsorer"
 menu:
   main:
     parent: "foretaget"
-    weight: 30
+    weight: 20
 ---
-Fotograf/er: 
+Fotograf/er:
 
 Idrottsmodeller:
 

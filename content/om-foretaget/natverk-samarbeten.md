@@ -4,7 +4,7 @@ title: "Nätverk/Samarbeten"
 menu:
   main:
     parent: "foretaget"
-    weight: 20
+    weight: 0
 ---
 New Challenge är ansluten till SISU-idrottsutbildarna som är ett nätverk för Sveriges föreningar inom utbildning.
 
