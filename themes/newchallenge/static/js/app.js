@@ -1,4 +1,3 @@
-$(document).foundation();
 $(document).ready(function() {
   $('nav').doubleTapToGo();
   $('.toggle-topbar').click(function(e) {
