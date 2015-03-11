@@ -1,6 +1,6 @@
 ---
 date: "2015-02-05T21:02:26+01:00"
-title: "Tjänster och pris"
+title: "Tjänster"
 menu:
   main:
     identifier: "tjanster"
@@ -10,4 +10,6 @@ Idrottspsykologisk rådgivning handlar om många saker där mötet med idrottare
 
 Det är därför viktigt att hålla sig uppdaterad om ny forskning och samtidigt hålla ett helhetsperspektiv eftersom lärdomar skall kunna appliceras i en specifik eller generell kontext. Eftersom alla individer är olika och har olika behov är det svårt att säga generellt hur många tillfällen som krävs.
 
-New Challenge skapar skräddarsydda lösningar för just dig/ert behov och därav varierar pris.
+New Challenge skapar skräddarsydda lösningar för just dig/era behov.
+
+Välkommen att [kontakta oss](/kontakt/) för att veta mer.

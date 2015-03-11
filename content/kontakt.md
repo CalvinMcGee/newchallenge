@@ -6,6 +6,7 @@ menu:
   main:
     weight: 30
 ---
+
 Kontakta Marcus Nyqvist om du har frågor kring rådgivning eller föreläsningar.
 
 Skicka en intresseanmälan här på hemsidan direkt eller till [newchallengesweden@gmail.com](mailto:newchallengesweden@gmail.com).
