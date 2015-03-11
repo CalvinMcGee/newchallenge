@@ -2,3 +2,5 @@ baseurl = "http://calvinmcgee.github.io/newchallenge"
 title = "New Challenge"
 theme = "newchallenge"
 canonifyurls = true
+[params]
+  email = "newchallengesweden@gmail.com"
