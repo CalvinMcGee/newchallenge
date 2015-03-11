@@ -2,5 +2,7 @@ baseurl = "http://calvinmcgee.github.io/newchallenge"
 title = "New Challenge"
 theme = "newchallenge"
 canonifyurls = true
+metaDataFormat = "yml"
 [params]
+  index_title = "Välkommen till New Challenge!"
   email = "newchallengesweden@gmail.com"
