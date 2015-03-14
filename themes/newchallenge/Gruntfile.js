@@ -22,8 +22,10 @@ module.exports = function(grunt) {
       js: {
         src: [
           'js/jquery.min.js',
+          'js/jquery.validate.min.js',
           'js/jquery.ui.widget.min.js',
           'js/jquery.doubletaptogo.js',
+          'js/contact.js',
           'js/app.js'
         ],
         dest: 'static/js/script.js'
