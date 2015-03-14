@@ -5,4 +5,4 @@ canonifyurls = true
 metaDataFormat = "yml"
 [params]
   index_title = "Välkommen till New Challenge!"
-  email = "newchallengesweden@gmail.com"
+  email = "marcus@newchallenge.se"

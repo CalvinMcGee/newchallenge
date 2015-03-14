@@ -42,8 +42,8 @@
             "message": {
               "to": [
                 {
-                  "email": "joachim@wallsin.com",
-                  "name": "Joachim Wallsin",
+                  "email": "marcus@newchallenge.se",
+                  "name": "Marcus Nyqvist",
                   "type": "to"
                 }
               ],
@@ -52,7 +52,7 @@
               },
               "merge_vars": [
                 {
-                  "rcpt": "joachim@wallsin.com",
+                  "rcpt": "marcus@newchallenge.se",
                   "vars": [
                     {
                       "name": "name",
