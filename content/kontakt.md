@@ -11,4 +11,4 @@ Kontakta Marcus Nyqvist om du har frågor kring rådgivning eller föreläsninga
 
 Skicka en intresseanmälan här på hemsidan direkt eller till [newchallengesweden@gmail.com](mailto:newchallengesweden@gmail.com).
 
-Eller ring på 073-5833329.
+Eller ring på 0735- 83 33 29.
