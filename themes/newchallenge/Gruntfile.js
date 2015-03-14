@@ -7,14 +7,14 @@ module.exports = function(grunt) {
           sassDir: 'scss',
           cssDir: 'static/css',
           environment: 'production',
-          //style: 'compressed'
+          outputStyle: 'compressed'
         }
       },
       dev: {                    // Another target
         options: {
           sassDir: 'scss',
           cssDir: 'static/css',
-          //style: 'expanded'
+          outputStyle: 'expanded'
         }
       }
     },
