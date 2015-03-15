@@ -34,7 +34,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         src: 'static/js/script.js',
-        dest: 'static/js/script.min.js'
+        dest: 'static/js/script.js'
       }
     }
   });
