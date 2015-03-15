@@ -19,11 +19,7 @@
       {{ range first 5 (where .Data.Pages "Section" "event") }}
         <div class="row">
           <div class="small-3 medium-2 columns">
-            <div class="date">
-              <span class="date__month">{{ .Date.Format "Jan" }}</span>
-              <span class="date__day">{{ .Date.Format "02" }}</span>
-              <span class="date__year">{{ .Date.Format "2006" }}</span>
-            </div>
+            {{ partial "date.html" . }}
           </div>
           <div class="event__content small-9 medium-10 columns clearfix">
             <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
