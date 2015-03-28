@@ -1,0 +1,33 @@
+.image {
+  border: solid 1px $silver;
+  display: block;
+  margin-bottom: rem-calc(20);
+  padding: rem-calc(20);
+
+  &__caption {
+    display: block;
+    margin-top: rem-calc(20);
+  }
+
+  &.left {
+    float: none !important;
+  }
+
+  &.right {
+    float: none !important;
+  }
+}
+
+@media #{$large-up} {
+  .image {
+    display: inline-block;
+
+    &.left {
+      float: left !important;
+    }
+
+    &.right {
+      float: right !important;
+    }
+  }
+}

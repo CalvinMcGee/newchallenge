@@ -3512,6 +3512,41 @@ blockquote p {
     font-size: 2rem;
   }
 }
+/* line 1, ../../scss/module/_image.scss */
+.image {
+  border: solid 1px #EFEFEF;
+  display: block;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+}
+/* line 7, ../../scss/module/_image.scss */
+.image__caption {
+  display: block;
+  margin-top: 1.25rem;
+}
+/* line 12, ../../scss/module/_image.scss */
+.image.left {
+  float: none !important;
+}
+/* line 16, ../../scss/module/_image.scss */
+.image.right {
+  float: none !important;
+}
+
+@media only screen and (min-width: 64.063em) {
+  /* line 22, ../../scss/module/_image.scss */
+  .image {
+    display: inline-block;
+  }
+  /* line 25, ../../scss/module/_image.scss */
+  .image.left {
+    float: left !important;
+  }
+  /* line 29, ../../scss/module/_image.scss */
+  .image.right {
+    float: right !important;
+  }
+}
 /* line 12, ../../scss/module/_navigation.scss */
 .contain-to-grid {
   width: 100%;
