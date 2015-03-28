@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Nytt dokument 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.9355792"
+     inkscape:cx="229.39793"
+     inkscape:cy="752.77777"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Bakgrund"
+     style="display:none">
+    <rect
+       style="fill:#0a75bf;fill-opacity:1;fill-rule:nonzero;stroke:#7789ce;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3779"
+       width="408.43729"
+       height="133.53412"
+       x="57.228909"
+       y="182.68713" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:51px;font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#00b29f;fill-opacity:1;stroke:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Heavy Italic;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;text-anchor:start;text-align:start;writing-mode:lr"
+       x="89.024391"
+       y="253.97218"
+       id="text2993"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/joachim/Hemsidor/newchallenge.se/themes/newchallenge/static/img/logo.png"
+       inkscape:export-xdpi="123.63"
+       inkscape:export-ydpi="123.63"><tspan
+         sodipodi:role="line"
+         id="tspan2995"
+         x="89.024391"
+         y="253.97218"
+         style="-inkscape-font-specification:Roboto Heavy Italic;font-family:Roboto;font-weight:900;font-style:italic;font-stretch:normal;font-variant:normal;font-size:51px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#00b29f;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;letter-spacing:0px">N<tspan
+   style="letter-spacing:3px;fill:#00b29f;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+   id="tspan3781">EW</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Heavy"
+       x="199.36584"
+       y="254.58211"
+       id="text2997"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="123.63"
+       inkscape:export-ydpi="123.63"
+       inkscape:export-filename="/home/joachim/Hemsidor/newchallenge.se/themes/newchallenge/static/img/logo.png"><tspan
+         sodipodi:role="line"
+         id="tspan2999"
+         x="199.36584"
+         y="254.58211"
+         style="font-size:45px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Heavy">CHALLENGE</tspan></text>
+  </g>
+</svg>
