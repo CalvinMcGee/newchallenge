@@ -6,8 +6,7 @@ menu:
     parent: "foretaget"
     weight: 20
 ---
-Fotograf/er:
+## Bilder
+ https://www.flickr.com/photos/golf_pictures/2543049856/
 
-Idrottsmodeller:
-
-Medverkande:
+Sidan är utvecklad av <a href="http://wallsin.com">Joachim Wallsin</a>
