@@ -3492,8 +3492,8 @@ blockquote p {
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
-  margin: 5rem 0;
-  line-height: 1.4;
+  margin: 4rem 0;
+  line-height: 1.7;
   text-align: center;
 }
 /* line 15, ../../scss/module/_header.scss */
@@ -3501,33 +3501,15 @@ blockquote p {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
-/* line 19, ../../scss/module/_header.scss */
-.header--company__new {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.2rem;
-  font-style: italic;
-  font-weight: 900;
-}
-/* line 26, ../../scss/module/_header.scss */
-.header--company__challenge {
-  font-weight: 900;
-  font-size: 2rem;
-  margin-left: 0.1rem;
+/* line 23, ../../scss/module/_header.scss */
+.header--name {
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 42, ../../scss/module/_header.scss */
+  /* line 30, ../../scss/module/_header.scss */
   .header--content {
     font-size: 2rem;
-  }
-  /* line 47, ../../scss/module/_header.scss */
-  .header--company__new {
-    font-size: 3.2rem;
-  }
-  /* line 50, ../../scss/module/_header.scss */
-  .header--company__challenge {
-    font-size: 2.8rem;
-    margin-left: 0.3rem;
   }
 }
 /* line 12, ../../scss/module/_navigation.scss */
