@@ -11,6 +11,11 @@ menu:
 Psykologiprogrammet inriktning idrott, Högskolan i Halmstad (kandidatexamen, 120 Hp)  
 Att arbeta som idrottspsykologisk rådgivare – magisterkurs Högskolan i Halmstad (30 Hp)
 
+<div class="image right">
+  <img src="/img/marcus.jpg" alt="" />
+  <span class="image__caption">Marcus Nyqvist från New Challenge</span>
+</div>
+
 Under utbildningen skapades en bred grundkompetens som med åren blev en bred bas inom området för både allmänpsykologi och idrottspsykologi. Utbildningen gav många exempel på hur mentala färdigheter kan utvecklas och många har jag använt mig av själv. Framförallt har utbildningsåren varit en viktig del eftersom det gavs möjlighet att arbeta tillämpat, d v s. med riktiga klienter och hjälpa individer i deras idrottskarriär eller en motionär. För att skapa mig ytterligare spetskompetens inom området fortsätter jag kontinuerligt att utbilda mig. Det ger mig som rådgivare en trygghet och mina kunder eftersom det blir tydligare att jag håller mig uppdaterad om aktuella forskningsrön.
 
 ## Bakgrund
