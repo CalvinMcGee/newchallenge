@@ -3,5 +3,4 @@ $(document).ready(function() {
     e.preventDefault();
     $('nav').toggleClass('expanded');
   });
-  $('#contact').contact();
 });
