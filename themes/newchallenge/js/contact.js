@@ -1,5 +1,5 @@
 (function( $ ) {
-  $.fn.contact = function() {
+  $.fn.contact = function(mandrillApi) {
     var el = $(this);
 
     el.validate({
@@ -33,7 +33,7 @@
           type: 'POST',
           url: 'https://mandrillapp.com/api/1.0/messages/send-template.json',
           data: {
-            "key": "ZIVFR36MlOEJhv5hN3d6ug",
+            "key": mandrillApi,
             "template_name": "kontaktformul-r",
             "template_content": [{
               name: 'none',
