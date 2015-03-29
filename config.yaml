@@ -6,3 +6,4 @@ metaDataFormat: "yml"
 params:
   index_title: "Välkommen till New Challenge!"
   email: "marcus@newchallenge.se"
+  mandrill: "ZIVFR36MlOEJhv5hN3d6ug"

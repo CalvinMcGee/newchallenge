@@ -7,3 +7,4 @@ params:
   index_title: "Välkommen till New Challenge!"
   email: "marcus@newchallenge.se"
   dev: true
+  mandrill: "ZIVFR36MlOEJhv5hN3d6ug"
