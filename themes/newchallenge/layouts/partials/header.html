@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="skip"><a href="#content">Hoppa till innehåll</a></div>
-    <div class="header">
+    <div class="header"{{ if .Site.Params.dev }} style="background-image: url('/newchallenge/img/background.jpg');"{{end}}>
       <div class="row">
         <div class="small-12 columns header--content">
           <div class="header--company"><img src="/img/logo.png" alt="New Challenge logo" /></div>

@@ -3485,9 +3485,11 @@ blockquote p {
 
 /* line 3, ../../scss/module/_header.scss */
 .header {
-  background: url("/newchallenge/img/background.jpg") center no-repeat;
+  background-image: url("/img/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
-/* line 6, ../../scss/module/_header.scss */
+/* line 8, ../../scss/module/_header.scss */
 .header--content {
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
@@ -3496,18 +3498,18 @@ blockquote p {
   line-height: 1.7;
   text-align: center;
 }
-/* line 15, ../../scss/module/_header.scss */
+/* line 17, ../../scss/module/_header.scss */
 .header--company {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
-/* line 23, ../../scss/module/_header.scss */
+/* line 25, ../../scss/module/_header.scss */
 .header--name {
   text-transform: uppercase;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 30, ../../scss/module/_header.scss */
+  /* line 32, ../../scss/module/_header.scss */
   .header--content {
     font-size: 2rem;
   }

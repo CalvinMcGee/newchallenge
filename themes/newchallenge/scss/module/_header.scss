@@ -1,7 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:900,900italic);
 
 .header {
-  background: url('/newchallenge/img/background.jpg') center no-repeat;
+  background-image: url('/img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
 
   &--content {
     color: $white;
