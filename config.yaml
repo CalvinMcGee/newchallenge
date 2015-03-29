@@ -1,7 +1,7 @@
-baseurl: "http://calvinmcgee.github.io/newchallenge"
+baseurl: ""
 title: "New Challenge"
 theme: "newchallenge"
-canonifyurls: true
+canonifyurls: false
 metaDataFormat: "yml"
 params:
   index_title: "Välkommen till New Challenge!"
