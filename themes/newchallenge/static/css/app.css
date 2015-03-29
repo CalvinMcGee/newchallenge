@@ -3517,7 +3517,7 @@ blockquote p {
 /* line 1, ../../scss/module/_image.scss */
 .image {
   border: solid 1px #EFEFEF;
-  display: block;
+  display: inline-block;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
 }
@@ -3535,16 +3535,12 @@ blockquote p {
   float: none !important;
 }
 
-@media only screen and (min-width: 64.063em) {
-  /* line 22, ../../scss/module/_image.scss */
-  .image {
-    display: inline-block;
-  }
-  /* line 25, ../../scss/module/_image.scss */
+@media only screen and (min-width: 40.063em) {
+  /* line 24, ../../scss/module/_image.scss */
   .image.left {
     float: left !important;
   }
-  /* line 29, ../../scss/module/_image.scss */
+  /* line 28, ../../scss/module/_image.scss */
   .image.right {
     float: right !important;
   }

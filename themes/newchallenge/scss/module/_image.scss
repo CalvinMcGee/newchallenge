@@ -1,6 +1,6 @@
 .image {
   border: solid 1px $silver;
-  display: block;
+  display: inline-block;
   margin-bottom: rem-calc(20);
   padding: rem-calc(20);
 
@@ -18,9 +18,8 @@
   }
 }
 
-@media #{$large-up} {
+@media #{$medium-up} {
   .image {
-    display: inline-block;
 
     &.left {
       float: left !important;
