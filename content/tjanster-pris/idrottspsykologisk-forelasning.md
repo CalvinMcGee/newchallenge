@@ -19,6 +19,6 @@ Idrottspsykologisk föreläsning kan erbjudas för bland annat grupper, organisa
 
 Föreläsningar kan gå till på många sätt och ni sätter gränserna för vad som är möjligt. Beroende på hur stor grupp ni är går det att göra dem mer eller mindre levande. Efter era önskemål skräddarsyr vi en **enskild** föreläsning eller om ni vill ha **flera** föreläsningar i olika teman.
 
-**Pris** beror på vad ni efterfrågar. Det vill säga om ni vill ha en eller flera föreläsningar pch hur många ni är.
+**Pris** beror på vad ni efterfrågar. Det vill säga om ni vill ha en eller flera föreläsningar och hur många ni är.
 
 [Välkommen att kontakta oss för mer info](/kontakt/).
