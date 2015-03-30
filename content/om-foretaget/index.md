@@ -8,7 +8,7 @@ menu:
 ---
 ## Utbildning
 
-Psykologiprogrammet inriktning idrott, Högskolan i Halmstad (kandidatexamen, 120 Hp)  
+Psykologiprogrammet inriktning idrott, Högskolan i Halmstad (kandidatexamen, 180 Hp)  
 Att arbeta som idrottspsykologisk rådgivare – magisterkurs Högskolan i Halmstad (30 Hp)
 
 <div class="image right">
