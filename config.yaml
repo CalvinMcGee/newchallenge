@@ -1,4 +1,4 @@
-baseurl: ""
+baseurl: "http://newchallenge.se"
 title: "New Challenge"
 theme: "newchallenge"
 canonifyurls: false
