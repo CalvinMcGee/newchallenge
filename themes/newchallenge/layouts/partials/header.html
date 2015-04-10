@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{.Title}}</title>
+    <title>{{ if eq .Title .Site.Title | not }}{{.Title}} - {{end}}{{.Site.Title}}</title>
     <meta name="keywords" content="{{with .Params.meta_keywords}}{{.}}{{else}}{{.Site.Params.meta_keywords}}{{end}}" />
     <meta name="description" content="{{with .Description}}{{.}}{{else}}{{.Site.Params.meta_description}}{{end}}" />
     <link rel="stylesheet" href="/css/app.css" />
