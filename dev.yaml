@@ -10,3 +10,6 @@ params:
   mandrill: "ZIVFR36MlOEJhv5hN3d6ug"
   meta_keywords: "marcus, nyqvist, challenge, marcus nyqvist, new challenge, individuell rådgivning, idrottspsykologisk föreläsning"
   meta_description: "New Challenge erbjuder idrottspsykologisk rådgivning och föreläsningar."
+  og_image: "/img/newchallenge-social-share.png"
+  og_image_width: "1238"
+  og_image_height: "648"
