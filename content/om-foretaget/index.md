@@ -12,7 +12,7 @@ Psykologiprogrammet inriktning idrott, Högskolan i Halmstad (kandidatexamen, 18
 Att arbeta som idrottspsykologisk rådgivare – magisterkurs Högskolan i Halmstad (30 Hp)
 
 <div class="image right">
-  <img src="/img/marcus.jpg" alt="" />
+  <img src="/img/marcus.jpg" alt="Marcus Nyqvist från New Challenge" />
   <span class="image__caption">Marcus Nyqvist från New Challenge</span>
 </div>
 
