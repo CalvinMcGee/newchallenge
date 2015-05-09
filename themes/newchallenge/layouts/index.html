@@ -6,13 +6,16 @@
     </div>
   </div>
   <div class="row">
-    <div class="small-12 medium-6 columns">
+    <div class="small-12 medium-3 columns">
+      <img src="/img/marcus_start.jpg" alt="Marcus Nyqvist från New Challenge" style="width: 100%;max-width: 568px;" />
+    </div>
+    <div class="small-12 medium-4 columns">
       <h2>Företaget</h2>
       {{ range first 1 (where .Data.Pages "Section" "index") }}
         {{ .Content }}
       {{ end }}
     </div>
-    <div class="small-12 medium-6 columns">
+    <div class="small-12 medium-5 columns">
       <h2>Aktuellt</h2>
       {{ range first 5 (where .Data.Pages "Section" "event") }}
         <div class="row">
