@@ -9,7 +9,7 @@ menu:
 Idrottspsykologisk föreläsning kan erbjudas för bland annat grupper, organisationer, föreningar och företag. Det finns en stor bredd över hur en föreläsning kan hjälpa individer att komma dra fördelar av dem. Här är exempel på teman som brukar vara aktuellt:
 
 <div class="image right">
-  <img src="/img/forelasning.jpg" alt="Föreläsning från Elof Lindälvs gymnasium" />
+  <img src="/img/forelasning.jpg" alt="Föreläsning från Elof Lindälvs gymnasium" style="max-width: 480px;" />
   <span class="image__caption">Föreläsning från Elof Lindälvs gymnasium</span>
 </div>
 
