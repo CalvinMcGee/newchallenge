@@ -1,7 +1,7 @@
-baseurl: "http://newchallenge.se"
+baseurl: "$BASEURL"
 title: "New Challenge"
 theme: "newchallenge"
-canonifyurls: false
+canonifyurls: $CANONIFYURLS
 metaDataFormat: "yml"
 params:
   index_title: "Välkommen till New Challenge!"
