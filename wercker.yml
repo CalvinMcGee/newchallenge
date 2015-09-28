@@ -1,9 +1,4 @@
 box: wercker/default
-build:
-  steps:
-    - script:
-      name: build
-      code: echo build
 deploy:
   steps:
     - arjen/hugo-build:
