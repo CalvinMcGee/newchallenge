@@ -1,15 +1,21 @@
 box: wercker/default
 build:
   steps:
+    - script:
+      name: build
+      code: echo build
+deploy:
+  steps:
     - arjen/hugo-build:
         version: 0.14
         config: $CONFIGFILE
-deploy:
-  steps:
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         basedir: public
   production:
+    - arjen/hugo-build:
+        version: 0.14
+        config: $CONFIGFILE
     - s3sync:
         key_id: $AWS_ACCESS_KEY_ID
         key_secret: $AWS_SECRET_ACCESS_KEY
