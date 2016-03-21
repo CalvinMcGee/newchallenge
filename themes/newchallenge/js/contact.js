@@ -1,5 +1,5 @@
 (function( $ ) {
-  $.fn.contact = function(mandrillApi) {
+  $.fn.contact = function() {
     var el = $(this);
 
     el.validate({
@@ -31,45 +31,14 @@
 
         $.ajax({
           type: 'POST',
-          url: 'https://mandrillapp.com/api/1.0/messages/send-template.json',
+          url: 'https://formspree.io/marcus@newchallenge.se',
+          datatype: 'json',
           data: {
-            "key": mandrillApi,
-            "template_name": "kontaktformul-r",
-            "template_content": [{
-              name: 'none',
-              content: 'none'
-            }],
-            "message": {
-              "to": [
-                {
-                  "email": "marcus@newchallenge.se",
-                  "name": "Marcus Nyqvist",
-                  "type": "to"
-                }
-              ],
-              "headers": {
-                "Reply-To": email
-              },
-              "merge_vars": [
-                {
-                  "rcpt": "marcus@newchallenge.se",
-                  "vars": [
-                    {
-                      "name": "name",
-                      "content": name
-                    },
-                    {
-                      "name": "email",
-                      "content": email
-                    },
-                    {
-                      "name": "text",
-                      "content": text
-                    }
-                  ]
-                }
-              ]
-            }
+            "_subject": 'E-post från hemsidan från ' + name,
+            "_replyto": email,
+            "E-postadress": email,
+            "Namn": name,
+            "Meddelande": text
           }
         })
         .done(function() {
