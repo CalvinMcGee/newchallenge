@@ -41,16 +41,13 @@
             "Meddelande": text
           }
         })
-        .done(function() {
+        .complete(function() {
           alert('Tack för ditt meddelande!');
 
           el_email.val('');
           el_name.val('');
           el_text.val('');
         })
-        .fail(function() {
-          console.log('fail');
-        });
       }
     });
   };
