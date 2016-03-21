@@ -1,7 +1,7 @@
 ---
 date: "2015-02-05T21:05:16+01:00"
 title: "Idrottspsykologisk föreläsning"
-og_image: "/img/forelasning.jpg"
+og_image: "img/forelasning.jpg"
 og_image_width: "480"
 og_image_height: "360"
 menu:

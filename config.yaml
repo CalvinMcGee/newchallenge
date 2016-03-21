@@ -1,4 +1,4 @@
-baseurl: "https://newchallenge.se"
+baseurl: "https://newchallenge.se/"
 title: "New Challenge"
 theme: "newchallenge"
 canonifyurls: false
@@ -8,6 +8,6 @@ params:
   email: "marcus@newchallenge.se"
   meta_keywords: "marcus, nyqvist, challenge, marcus nyqvist, new challenge, individuell rådgivning, idrottspsykologisk föreläsning"
   meta_description: "New Challenge erbjuder idrottspsykologisk rådgivning och föreläsningar."
-  og_image: "/img/newchallenge-social-share.png"
+  og_image: "img/newchallenge-social-share.png"
   og_image_width: "1238"
   og_image_height: "648"
