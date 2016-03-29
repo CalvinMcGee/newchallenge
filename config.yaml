@@ -1,10 +1,12 @@
 baseurl: "https://newchallenge.se/"
-title: "New Challenge"
+title: "Marcus Nyqvist, New Challenge"
 theme: "newchallenge"
 canonifyurls: false
 metaDataFormat: "yml"
 params:
-  index_title: "Välkommen till New Challenge!"
+  company: "New Challenge"
+  index_h1: "Välkommen till New Challenge!"
+  index_title: "Idrottspsykologisk rådgivning med Marcus Nyqvist, New Challenge"
   email: "marcus@newchallenge.se"
   meta_keywords: "marcus, nyqvist, challenge, marcus nyqvist, new challenge, individuell rådgivning, idrottspsykologisk föreläsning"
   meta_description: "New Challenge erbjuder idrottspsykologisk rådgivning och föreläsningar."
