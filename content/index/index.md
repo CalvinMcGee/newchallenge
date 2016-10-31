@@ -2,6 +2,12 @@
 Description: ""
 date: "2015-02-14T22:30:25+01:00"
 title: "index"
+menu:
+  main:
+    - Name: "Referenser"
+      Weight: 25
+      Identifier: "referenser"
+      URL: "/reference/"
 
 ---
 
