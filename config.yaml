@@ -13,10 +13,3 @@ params:
   og_image: "img/newchallenge-social-share.png"
   og_image_width: "1238"
   og_image_height: "648"
-
-menu:
-  main:
-    - Name: "Referenser"
-      Weight: 25
-      Identifier: "referenser"
-      URL: "/reference/"
