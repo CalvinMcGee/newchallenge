@@ -5,5 +5,5 @@ aliases:
   - /reference/forelasning-lindalv/
 nodate: true
 ---
-Föreläsing på Elof lindälvs gymnasium den 13:e april 08-09:30 för Aranäs och Lindälvselever på Nationellt Godkända Elitidrottsutbildningen.
+Föreläsing på Elof lindälvs gymnasium för Aranäs och Lindälvselever på Nationellt Godkända Elitidrottsutbildningen.
 <!--more-->
