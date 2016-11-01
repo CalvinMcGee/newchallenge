@@ -1,5 +1,7 @@
+{{ if not .Params.nodate }}
 <div class="date">
   <span class="date__month">{{with .Params.month}}{{.}}{{else}}{{.Date.Format "Jan"}}{{end}}</span>
   <span class="date__day">{{.Date.Format "02"}}</span>
   <span class="date__year">{{.Date.Format "2006"}}</span>
 </div>
+{{ end }}
