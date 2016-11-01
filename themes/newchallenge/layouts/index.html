@@ -20,7 +20,9 @@
       {{ range first 5 (where .Data.Pages "Section" "event") }}
         <div class="row">
           <div class="small-3 medium-2 columns">
-            {{ partial "date.html" . }}
+            {{ if not .Params.nodate }}
+              {{ partial "date.html" . }}
+            {{ end }}
           </div>
           <div class="event__content small-9 medium-10 columns clearfix">
             <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
