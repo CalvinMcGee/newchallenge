@@ -4,6 +4,7 @@ title: "Föreläsning Särö Golfklubb"
 month: "Okt"
 aliases:
   - /reference/forelasning-saro-golfklubb/
+nodate: true
 ---
 Föreläsning för Juniorverksamhet på Särö Golfklubb tema Visualisering - Att använda dina sinnen för att optimera prestationen.
 <!--more-->
