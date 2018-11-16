@@ -15,7 +15,7 @@ dev:
         basedir: public_dev
 production:
   steps:
-    - edgecaseadmin/install-aws-cli:
+    - edgecaseinc/install-aws-cli:
         key: $AWS_ACCESS_KEY_ID
         secret: $AWS_SECRET_ACCESS_KEY
         region: $AWS_REGION
