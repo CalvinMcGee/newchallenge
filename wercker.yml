@@ -1,16 +1,16 @@
 box: debian
-deploy:
+build:
   steps:
     - arjen/hugo-build:
         version: 0.14
         config: $CONFIGFILE
+dev:
+  steps:
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         basedir: public
-  production:
-    - arjen/hugo-build:
-        version: 0.14
-        config: $CONFIGFILE
+production:
+  steps:
     - edgecaseadmin/install-aws-cli:
         key: $AWS_ACCESS_KEY_ID
         secret: $AWS_SECRET_ACCESS_KEY
