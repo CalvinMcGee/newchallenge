@@ -2,9 +2,9 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-        version: 0.14
+        version: "0.14"
     - arjen/hugo-build:
-        version: 0.14
+        version: "0.14"
         config: "dev.yaml"
 dev:
   steps:
