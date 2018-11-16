@@ -2,4 +2,5 @@ themes/newchallenge/.sass-cache/
 nbproject/
 hugo*
 public/
+public_dev/
 node_modules
