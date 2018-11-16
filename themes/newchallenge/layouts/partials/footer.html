@@ -12,7 +12,7 @@
           <a href="https://www.facebook.com/newchallengesweden.se" target="_blank">
             <img src="/img/facebook-square.svg" width="100" alt="Facebook" />
           </a>
-          <a href="{{.Site.BaseUrl}}event/index.xml">
+          <a href="{{.Site.BaseURL}}event/index.xml">
             <img src="/img/rss-feed.svg" width="100" alt="RSS" />
           </a>
         </div>
@@ -24,18 +24,18 @@
             {{ range .Site.Menus.main }}
               {{ if .HasChildren }}
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="{{ .Url }}">{{.Name}}</a>
+                  <a class="sitemap__link" href="{{ .URL }}">{{.Name}}</a>
                   <ul class="sitemap__sub">
                     {{ range .Children }}
                     <li class="sitemap__subitem">
-                      <a class="sitemap__sublink" href="{{ .Url }}">{{.Name}}</a>
+                      <a class="sitemap__sublink" href="{{ .URL }}">{{.Name}}</a>
                     </li>
                     {{ end }}
                   </ul>
                 </li>
               {{ else}}
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="{{ .Url }}">{{.Name}}</a>
+                  <a class="sitemap__link" href="{{ .URL }}">{{.Name}}</a>
                 </li>
               {{ end }}
             {{ end }}

@@ -1,4 +1,4 @@
-baseurl: "http://calvinmcgee.github.io/newchallenge/"
+baseURL: "http://calvinmcgee.github.io/newchallenge/"
 title: "Marcus Nyqvist, New Challenge"
 theme: "newchallenge"
 canonifyurls: true

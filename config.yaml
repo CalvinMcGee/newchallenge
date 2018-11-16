@@ -1,4 +1,4 @@
-baseurl: "https://newchallenge.se/"
+baseURL: "https://newchallenge.se/"
 title: "Marcus Nyqvist, New Challenge"
 theme: "newchallenge"
 canonifyurls: false

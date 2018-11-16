@@ -10,11 +10,11 @@
     <meta property="og:title" content="{{.Title}}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{.Permalink}}" />
-    <meta property="og:image" content="{{.Site.BaseUrl}}{{with .Params.og_image}}{{.}}{{else}}{{.Site.Params.og_image}}{{end}}" />
+    <meta property="og:image" content="{{.Site.BaseURL}}{{with .Params.og_image}}{{.}}{{else}}{{.Site.Params.og_image}}{{end}}" />
     <meta property="og:image:width" content="{{with .Params.og_image_width}}{{.}}{{else}}{{.Site.Params.og_image_width}}{{end}}" />
     <meta property="og:image:height" content="{{with .Params.og_image_height}}{{.}}{{else}}{{.Site.Params.og_image_height}}{{end}}" />
 
-    <link rel="alternate" type="application/rss+xml" title="RSS-flöde för newchallenge.se" href="{{.Site.BaseUrl}}event/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS-flöde för newchallenge.se" href="{{.Site.BaseURL}}event/index.xml" />
     <link rel="stylesheet" href="/css/app.css?v=3" />
     <script src="/js/modernizer.js"></script>
   </head>
