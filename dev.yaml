@@ -3,6 +3,7 @@ title: "Marcus Nyqvist, New Challenge"
 theme: "newchallenge"
 canonifyurls: true
 metaDataFormat: "yml"
+publishDir: "public_dev"
 params:
   company: "New Challenge"
   index_h1: "Välkommen till New Challenge!"
