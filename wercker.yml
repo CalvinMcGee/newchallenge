@@ -1,18 +1,21 @@
 box: debian
 build:
   steps:
-    - arjen/hugo-build@1.29.1:
-        version: "0.14"
-        config: "config.yaml"
 dev:
   steps:
     - install-packages:
         packages: git
+    - arjen/hugo-build@1.29.1:
+        version: "0.14"
+        config: "dev.yaml"
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         basedir: public_dev
 production:
   steps:
+    - arjen/hugo-build@1.29.1:
+        version: "0.14"
+        config: "config.yaml"
     - hikaruhorie/install-aws-cli:
         key: $AWS_ACCESS_KEY_ID
         secret: $AWS_SECRET_ACCESS_KEY
