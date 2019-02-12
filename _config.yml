@@ -27,10 +27,21 @@ github_username:  jekyll
 # Build settings
 host: 0.0.0.0
 markdown: kramdown
-theme: minima
+# theme: minima
 plugins:
   - jekyll-assets
   - jekyll-feed
+
+assets:
+  compress:
+    css: true
+    javascript: true
+  prefix: "/assets"
+  digest: true
+  sources:
+    - _assets/img
+    - _assets/sass
+    - _assets/js
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -19,6 +19,9 @@ gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "uglifier", "~> 4.1.20"
+  gem "execjs", "~> 2.7.0"
+  gem "therubyracer", "~> 0.12.3"
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-assets", "~> 3.0.12"
 end
