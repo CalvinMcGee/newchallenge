@@ -40,7 +40,7 @@ assets:
   digest: true
   sources:
     - _assets/img
-    - _assets/sass
+    - _assets/scss
     - _assets/js
 
 language: "sv"
