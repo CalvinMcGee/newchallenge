@@ -1,0 +1,16 @@
+.parallax-content {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+
+  &--golf {
+    background-image: linear-gradient(rgba(242,75,75,0.3),rgba(242,75,75,0.3)), asset_url("freddie-collins-505527-unsplash.jpg");
+  }
+
+  &__wrapper {
+    min-height: 50vh;
+    background-color: rgba(255,255,255,0.50);
+  }
+}
