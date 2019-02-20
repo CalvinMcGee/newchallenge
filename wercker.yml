@@ -21,7 +21,7 @@ dev:
 build-dev:
   steps:
     # Install Jekyll and other dependencies
-    - bundle-install
+    - bundle-install@1.1.3
 
     - script:
       name: Jekyll dev build
