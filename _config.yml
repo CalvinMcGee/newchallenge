@@ -56,6 +56,9 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+  - dev-docker.sh
+  - docker-compose.yml
+  - Dockerfile
   - wercker.yml
 
 defaults:
