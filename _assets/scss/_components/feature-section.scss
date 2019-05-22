@@ -10,8 +10,6 @@
 
   .cell {
     margin-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 
     @include breakpoint(medium up) {
       margin-bottom: 0;

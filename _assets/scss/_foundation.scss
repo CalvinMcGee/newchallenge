@@ -2,7 +2,7 @@
 
 // Global styles
 @include foundation-global-styles;
-//@include foundation-forms;
+@include foundation-forms;
 @include foundation-typography;
 
 // Grids (choose one)
@@ -11,7 +11,7 @@
 // @include foundation-flex-grid;
 
 // Generic components
-//@include foundation-button;
+@include foundation-button;
 //@include foundation-button-group;
 //@include foundation-close-button;
 //@include foundation-label;

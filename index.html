@@ -14,7 +14,7 @@
 </section>
 <section class="grid-container feature-section">
   <h2 class="feature-section__headline">Vad vi erbjuder</h2>
-  <div class="grid-x">
+  <div class="grid-x grid-padding-x">
     <div class="cell medium-6">
       <i class="fas fa-user" aria-hidden="true"></i>
       <h4 class="feature-section__title">Individuell rådgivning</h4>
@@ -29,8 +29,41 @@
 </section>
 <section class="parallax-content parallax-content--golf">
   <div class="grid-container">
-    <div class="parallax-content__wrapper grid-x grid-padding-x align-center-middle text-center">
-      <div class="cell parallax-content__body">Är du/ni intresserade av att veta mer och hur vi kan hjälpa er Kontakta Marcus Nyqvist direkt här på hemsidan.</div>
+    <div class="grid-x">
+      <div class="cell medium-6"></div>
+      <div class="cell medium-6">
+        <form>
+          <div class="grid-x contact-form">
+            <div class="cell contact-form__head">
+              <h2>Kontakta oss</h2>
+            </div>
+            <div class="cell contact-form__body padding-top-1">
+              <label>
+                Namn
+                <input id="name" name="name" type="text" placeholder="Namn">
+              </label>
+            </div>
+            <div class="cell contact-form__body">
+              <label>
+                E-post
+                <input id="email" name="email" type="text" placeholder="E-post">
+              </label>
+            </div>
+            <div class="cell contact-form__body">
+              <label>
+                Meddelande
+                <textarea id="text" name="text" rows="3" placeholder="Meddelande"></textarea>
+                </label>
+            </div>
+            <div class="cell contact-form__body">
+              <input type="submit" class="button" value="Skicka" />
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+    <!--<div class="parallax-content__wrapper grid-x grid-padding-x align-center-middle text-center">
+      <div class="cell parallax-content__body">Är du/ni intresserade av att veta mer och hur vi kan hjälpa er Kontakta Marcus Nyqvist direkt här på hemsidan.</div>
+    </div>-->
   </div>
 </section>

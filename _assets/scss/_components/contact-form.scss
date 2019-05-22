@@ -1,0 +1,23 @@
+.contact-form {
+  @include border-radius(10px);
+  background-color: $white;
+
+  &__head,
+  &__body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__head {
+    background-color: $dark-gray;
+    border-radius: 10px 10px 0 0;
+    color: $white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__body {
+    padding-bottom: 1rem;
+  }
+}
