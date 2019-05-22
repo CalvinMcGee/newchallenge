@@ -1,0 +1,26 @@
+.feature-section {
+  text-align: center;
+  padding: 2rem 0;
+  max-width: 50rem;
+
+  &__headline {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .cell {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include breakpoint(medium up) {
+      margin-bottom: 0;
+    }
+  }
+
+  .fas {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+}
