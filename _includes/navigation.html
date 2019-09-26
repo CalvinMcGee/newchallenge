@@ -1,14 +1,18 @@
-<ul>
-  {% for item in site.data.navigation.toc %}
-    <li>
-      <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-      {% if item.subitems %}
-        <ul>
-        {% for entry in item.subitems %}
-          <li><a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a></li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+<nav>
+  <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+    {% for item in site.data.navigation.toc %}
+      <li class="{% if item.url == page.url %}is-active{% endif %}">
+        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+        {% if item.subitems %}
+          <ul class="vertical menu">
+          {% for entry in item.subitems %}
+            <li class="{% if entry.url == page.url %}is-active{% endif %}">
+              <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
