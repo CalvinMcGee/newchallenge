@@ -1,5 +1,5 @@
 <nav>
-  <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+  <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true">
     {% for item in site.data.navigation.toc %}
       <li class="{% if item.url == page.url %}active{% endif %}">
         <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
