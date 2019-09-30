@@ -1,4 +1,5 @@
 ---
+title: Hem
 layout: index
 permalink: /
 data:
