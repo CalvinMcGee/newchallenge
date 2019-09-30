@@ -36,3 +36,20 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "home"
+    label: "Home"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "_data/home.yml"
+        fields:
+          - label: "Hero"
+            name: "Hero"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "markdown"
+              - label: "Body"
+                name: body
+                widget: "markdown"

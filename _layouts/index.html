@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-{% for data in page.data.content %}
+{% for data in site.data.home.content %}
   {% if data.name == 'hero' %}
     <section class="grid-container">
       <div class="content-hero grid-x grid-padding-x align-center-middle text-center">
         <div class="cell padding-vertical-2">
-          <h2 class="content-hero__title">{{ data.title | markdownify }}</h2>
+          <h2 class="content-hero__title">{{ data.title | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
         </div>
         <div class="cell padding-vertical-2 content-hero__body">
           {{ data.body | markdownify }}
