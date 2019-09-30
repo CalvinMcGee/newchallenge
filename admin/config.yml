@@ -90,3 +90,13 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Url"
                 name: "url"
                 widget: "string"
+              - label: "Subitems"
+                name: "subitems"
+                widget: "string"
+                fields:
+                - label: "Title"
+                  name: "title"
+                  widget: "string"
+                - label: "Url"
+                  name: "url"
+                  widget: "string"
