@@ -44,7 +44,7 @@ collections: # A list of collections the CMS should be able to edit
         file: "_data/home.yml"
         fields:
           - label: "Hero"
-            name: "Hero"
+            name: "hero"
             widget: "object"
             fields:
               - label: "Title"
