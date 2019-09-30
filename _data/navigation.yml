@@ -1,15 +1,17 @@
 toc:
-  - title: Tjänster
-    url: /tjanster-pris/
-    subitems:
+  - subitems:
       - title: Idrottspsykologisk föreläsning
         url: /tjanster-pris/idrottspsykologisk-forelasning/
       - title: Individuell rådgivning
         url: /tjanster-pris/individuell-radgivning/
-  - title: Om företaget
-    url: /om-foretaget/
-    subitems:
+    title: Tjänster
+    url: /tjanster-pris/
+  - subitems:
       - title: Nätverk/Samarbeten
         url: /om-foretaget/natverk-samarbeten/
       - title: Sponsorer
         url: /om-foretaget/sponsorer/
+    title: Om företaget
+    url: /om-foretaget/
+  - title: Kontakt
+    url: /kontakt/
