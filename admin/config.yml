@@ -73,3 +73,20 @@ collections: # A list of collections the CMS should be able to edit
                 - label: "Body"
                   name: "body"
                   widget: "markdown"
+  - name: "navigation"
+    label: "Navigation"
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/navigation.yml"
+        fields:
+          - label: "TOC"
+            name: "toc"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Url"
+                name: "url"
+                widget: "string"
