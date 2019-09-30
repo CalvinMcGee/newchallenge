@@ -53,3 +53,27 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Body"
                 name: body
                 widget: "markdown"
+          - label: "Feature"
+            name: "feature"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "markdown"
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - label: "Section"
+                    name: "section"
+                    widget: "object"
+                    fields:
+                      - label: "Icon"
+                        name: "icon"
+                        widget: "string"
+                      - label: "Title"
+                        name: "title"
+                        widget: "markdown"
+                      - label: "Body"
+                        name: "body"
+                        widget: "markdown"
