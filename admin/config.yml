@@ -93,7 +93,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Subitems"
                 name: "subitems"
                 required: false
-                widget: "string"
+                widget: "list"
                 fields:
                 - label: "Title"
                   name: "title"
