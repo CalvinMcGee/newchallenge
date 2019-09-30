@@ -1,35 +1,17 @@
 hero:
-  body: >
-    New Challenge kan hjälpa dig att komma tillbaka på banan igen för att ta
-    nästa steg.
-
-    Vi jobbar med skräddarsydda lösningar för att optimera prestationen.
-
-    Precis som vi tränar fysisk styrka behöver vi träna mentala färdigheter för
-    att hantera framgång och misslyckanden. Ibland har vi bristande motivation
-    eller känner oss stressade inför viktiga prestationer som tävling eller
-    match. Oavsett om du är motionär eller idrottare på elitnivå finns det
-    alltid något att förbättra. Vad sägs som att göra en karriärplanering eller
-    personlig målsättning för en längre tid och se hur målet närmar sig!
   title: |
     Har din prestation blivit sämre?
     Eller står du och stampar på samma nivå?
+  body: |
+    New Challenge kan hjälpa dig att komma tillbaka på banan igen för att ta nästa steg.
+    Vi jobbar med skräddarsydda lösningar för att optimera prestationen.
+    Precis som vi tränar fysisk styrka behöver vi träna mentala färdigheter för att hantera framgång och misslyckanden. Ibland har vi bristande motivation eller känner oss stressade inför viktiga prestationer som tävling eller match. Oavsett om du är motionär eller idrottare på elitnivå finns det alltid något att förbättra. Vad sägs som att göra en karriärplanering eller personlig målsättning för en längre tid och se hur målet närmar sig!
 feature:
-  sections:
-    - section:
-        body: >-
-          Här kan du som individ eller ni som lag få hjälp med att hantera er
-          målbild. Tillsammans arbetar vi för att du skall må bättre och lära
-          dig att hantera dina känslor och tankar för att utvecklas i strävan
-          för högre mål.
-        icon: fa-user
-        title: Individuell rådgivning
-    - section:
-        body: >-
-          Här kan ni som lag, grupp eller företag få möjlighet att lära er mer
-          om ett psykologiskt område. Här väljer ni vad ni är intresserade av
-          och vi hjälps åt att sätta ihop en föreläsning som möter era
-          förväntningar.
-        icon: fa-chalkboard-teacher
-        title: Idrottspsykologisk föreläsning
   title: Vad vi erbjuder
+  sections:
+    - icon: fa-user
+      title: Individuell rådgivning
+      body: Här kan du som individ eller ni som lag få hjälp med att hantera er målbild. Tillsammans arbetar vi för att du skall må bättre och lära dig att hantera dina känslor och tankar för att utvecklas i strävan för högre mål.
+    - icon: fa-chalkboard-teacher
+      title: Idrottspsykologisk föreläsning
+      body: Här kan ni som lag, grupp eller företag få möjlighet att lära er mer om ett psykologiskt område. Här väljer ni vad ni är intresserade av och vi hjälps åt att sätta ihop en föreläsning som möter era förväntningar.
