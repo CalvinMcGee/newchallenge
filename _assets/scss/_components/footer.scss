@@ -1,0 +1,32 @@
+$footer-bg: $secondary-color;
+
+.footer {
+  background: $footer-bg;
+  color: lighten($footer-bg, 40%);
+  padding: 2rem 0 0;
+
+  &__block {
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__contact {
+    .fas {
+      font-size: 2rem;
+      color: darken($footer-bg, 20%);
+      min-width: 3rem;
+    }
+  }
+}
+
+.footer-bottom {
+  background: darken($footer-bg, 20%);
+  padding: 1rem 0;
+
+  a {
+    color: lighten($footer-bg, 40%);
+  }
+}
