@@ -19,7 +19,7 @@
       <div class="grid-x align-justify">
         <div class="cell medium-auto">{{ site.title }} &copy; Copyright {{ site.time | date: "%Y" }}</div>
         <div class="cell medium-auto">
-          <ul class="menu simple align-right">
+          <ul class="menu simple">
             {% for item in site.data.navigation.toc %}
               <li>
                 <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>

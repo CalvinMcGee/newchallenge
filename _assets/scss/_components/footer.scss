@@ -30,3 +30,9 @@ $footer-bg: $secondary-color;
     color: lighten($footer-bg, 40%);
   }
 }
+
+@include breakpoint(medium up) {
+  ul {
+    justify-content: flex-end;
+  }
+}
