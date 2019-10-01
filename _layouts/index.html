@@ -23,6 +23,7 @@ layout: default
           <i class="fas {{ section.icon }}" aria-hidden="true"></i>
           <h4 class="feature-section__title">{{ section.title }}</h4>
           <p class="feature-section__desc">{{ section.body }}</p>
+          <a href="{{ site.baseurl | append: section.url }}" class="button">{{ section.title }}</a>
         </div>
       {% endfor %}
     </div>
