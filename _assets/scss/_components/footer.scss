@@ -32,7 +32,9 @@ $footer-bg: $secondary-color;
 }
 
 @include breakpoint(medium up) {
-  ul {
-    justify-content: flex-end;
+  .footer {
+    ul {
+      justify-content: flex-end;
+    }
   }
 }
