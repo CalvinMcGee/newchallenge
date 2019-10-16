@@ -15,7 +15,7 @@ layout: default
 {% endif %}
 
 {% if site.data.home.feature %}
-  <section class="grid-container feature-section">
+  <section class="grid-container feature-section padding-vertical-2">
     <h2 class="feature-section__headline">{{ site.data.home.feature.title | markdownify }}</h2>
     <div class="grid-x grid-padding-x">
       {% for section in site.data.home.feature.sections %}
