@@ -1,18 +1,25 @@
-<nav>
-  <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true">
-    {% for item in site.data.navigation.toc %}
-      <li class="{% if item.url == page.url %}active{% endif %}">
-        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-        {% if item.subitems %}
-          <ul class="vertical menu">
-          {% for entry in item.subitems %}
-            <li class="{% if entry.url == page.url %}active{% endif %}">
-              <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
-            </li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+<div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="top-menu"></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="top-menu">
+  <nav class="top-bar-right">
+    <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true">
+      {% for item in site.data.navigation.toc %}
+        <li class="{% if item.url == page.url %}active{% endif %}">
+          <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          {% if item.subitems %}
+            <ul class="vertical menu">
+            {% for entry in item.subitems %}
+              <li class="{% if entry.url == page.url %}active{% endif %}">
+                <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

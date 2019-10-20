@@ -3,11 +3,43 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 }
+
+.top-bar {
+  position: absolute;
+  width: 100%;
+}
+
+
+  .top-bar {
+    ul {
+      background-color: $white;
+
+      @include breakpoint(medium up) {
+        background-color: transparent;
+      }
+    }
+
+    a,
+    .active a
+    {
+      background: $white;
+      color: $black;
+
+      @include breakpoint(medium up) {
+        background: transparent;
+        color: $white
+      }
+    }
+  }
 
 .header {
   min-height: 50vh;
+
+  @include breakpoint(medium up) {
+    padding-top: 4rem;
+  }
 
   &__title,
   &__subtitle {
