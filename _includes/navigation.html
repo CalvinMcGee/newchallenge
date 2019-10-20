@@ -8,7 +8,7 @@
     <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true">
       {% for item in site.data.navigation.toc %}
         <li class="{% if item.url == page.url %}active{% endif %}">
-          <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          <a href="{% if item.anchor %}{{ item.url }}{% else %}{{ site.baseurl }}{{ item.url }}{% endif %}">{{ item.title }}</a>
           {% if item.subitems %}
             <ul class="vertical menu">
             {% for entry in item.subitems %}
