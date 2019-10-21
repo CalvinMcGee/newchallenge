@@ -2,9 +2,7 @@
   <div class="grid-container">
     <div class="grid-x grid-margin-x align-stretch">
       <div class="cell medium-6 padding-vertical-2 parallax-content__block contact">
-        <p>Kontakta Marcus Nyqvist om du har frågor kring rådgivning eller föreläsningar.</p>
-        <p>Skicka en intresseanmälan här på hemsidan direkt eller till <a href="mailto:marcus@newchallenge.se">marcus@newchallenge.se</a>.</p>
-        <p>Eller ring på <a href="tel:+46735833329">0735-83 33 29</a>.</p>
+        {{ site.data.site.contact | markdownify }}
       </div>
       <div class="cell medium-6 parallax-content__block">
         <form name="contact" action="{{ site.baseurl }}{{ site.form.success }}" method="POST" data-netlify="true" data-netlify-recaptcha="true">
@@ -40,8 +38,5 @@
         </form>
       </div>
     </div>
-    <!--<div class="parallax-content__wrapper grid-x grid-padding-x align-center-middle text-center">
-      <div class="cell parallax-content__body">Är du/ni intresserade av att veta mer och hur vi kan hjälpa er Kontakta Marcus Nyqvist direkt här på hemsidan.</div>
-    </div>-->
   </div>
 </section>
