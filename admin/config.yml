@@ -105,9 +105,9 @@ collections: # A list of collections the CMS should be able to edit
                   name: "url"
                   widget: "string"
   - name: "site"
-    label: "Site information"
+    label: "Site"
     files:
-      - label: "Site"
+      - label: "Site information"
         name: "site"
         file: "_data/site.yml"
         fields:
