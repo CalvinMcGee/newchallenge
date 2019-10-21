@@ -59,6 +59,9 @@ exclude:
   - Dockerfile
   - wercker.yml
 
+form:
+  success: "/success/"
+
 defaults:
   -
     scope:
