@@ -11,4 +11,4 @@ New Challenge skapar skräddarsydda lösningar för just dig/era behov.
 
 New Challenge arbetar framförallt inom region väst. Det vill säga Göteborg med omnejd, Kungsbacka och Varberg.
 
-Välkommen att [kontakta oss](/kontakt/) för att veta mer.
+Välkommen att [kontakta oss](#kontakt) för att veta mer.

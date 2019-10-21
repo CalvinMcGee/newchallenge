@@ -17,4 +17,4 @@ Föreläsningar kan gå till på många sätt och ni sätter gränserna för vad
 
 **Pris** beror på vad ni efterfrågar. Det vill säga om ni vill ha en eller flera föreläsningar och hur många ni är.
 
-[Välkommen att kontakta oss för mer info](/kontakt/).
+[Välkommen att kontakta oss för mer info](#kontakt).
