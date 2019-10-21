@@ -7,7 +7,7 @@
         <p>Eller ring på <a href="tel:+46735833329">0735-83 33 29</a>.</p>
       </div>
       <div class="cell medium-6 parallax-content__block">
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
           <div class="grid-x contact-form">
             <div class="cell contact-form__head">
               <h2>Kontakta oss</h2>
@@ -29,6 +29,9 @@
                 Meddelande
                 <textarea id="text" name="text" rows="3" placeholder="Meddelande"></textarea>
                 </label>
+            </div>
+            <div class="cell contact-form__body">
+              <div data-netlify-recaptcha="true"></div>
             </div>
             <div class="cell contact-form__body">
               <input type="submit" class="button" value="Skicka" />
