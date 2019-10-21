@@ -105,7 +105,7 @@ collections: # A list of collections the CMS should be able to edit
                   name: "url"
                   widget: "string"
   - name: "site"
-    label: "Site"
+    label: "Site information"
     files:
       - label: "Site"
         name: "site"
@@ -113,4 +113,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - label: "Contact"
             name: "contact"
+            widget: "markdown"
+          - label: "Footer"
+            name: "footer_text"
             widget: "markdown"
