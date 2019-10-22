@@ -64,13 +64,15 @@ form:
   success: "/success/"
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: "pages" # an empty string here means all files in the project
     values:
       permalink: "/:basename/"
+  - scope:
+      path: "admin"
+    values:
+      sitemap: false
