@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "therubyracer", "~> 0.12.3"
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-assets", "~> 3.0.12"
+  gem 'jekyll-seo-tag', '~> 2.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

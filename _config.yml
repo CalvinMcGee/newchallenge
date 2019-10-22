@@ -28,6 +28,7 @@ markdown: kramdown
 plugins:
   - jekyll-assets
   - jekyll-feed
+  - jekyll-seo-tag
 
 assets:
   compress:
@@ -41,6 +42,7 @@ assets:
     - _assets/js
 
 language: "sv"
+lang: "sv"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
