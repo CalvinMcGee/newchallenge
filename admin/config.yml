@@ -114,6 +114,3 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Contact"
             name: "contact"
             widget: "markdown"
-          - label: "Footer"
-            name: "footer_text"
-            widget: "markdown"
