@@ -8,8 +8,8 @@
         </div>
         <div class="cell medium-4 footer__block footer__contact">
           <h4 class="footer__title">Kontakt</h4>
-          <p><i class="fas fa-mobile" aria-hidden="true"></i>{{ site.phone }}</p>
-          <p><i class="fas fa-envelope-open-text" aria-hidden="true"></i>{{ site.email }}</p>
+          <p><i class="fas fa-mobile" aria-hidden="true"></i><a href="tel:{{ site.phone_short }}">{{ site.phone }}</a></p>
+          <p><i class="fas fa-envelope-open-text" aria-hidden="true"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         </div>
       </div>
     </div>

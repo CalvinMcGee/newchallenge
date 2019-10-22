@@ -5,6 +5,10 @@ $footer-bg: $secondary-color;
   color: lighten($footer-bg, 40%);
   padding: 2rem 0 0;
 
+  a {
+    color: lighten($footer-bg, 40%);
+  }
+
   &__block {
     padding-bottom: 1rem;
   }
