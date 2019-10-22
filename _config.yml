@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Marcus Nyqvist, New Challenge
+title: New Challenge
+site_title: Marcus Nyqvist, New Challenge
 email: marcus@newchallenge.se
 phone: 0735-83 33 29
 phone_short: "+46735833329"
