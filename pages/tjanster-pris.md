@@ -1,6 +1,7 @@
 ---
 title: Tjänster
 permalink: /tjanster-pris/
+description: New Challenge erbjuder idrottspsykologisk rådgivning och föreläsningar.
 ---
 
 Idrottspsykologisk rådgivning handlar om många saker där mötet med idrottare, ledare och övriga involverade bara är en liten del. Det handlar även om att skapa ett bra samarbete där både rådgivare och idrottare känner sig bekväma.
