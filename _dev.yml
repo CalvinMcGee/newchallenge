@@ -1,3 +1,1 @@
-baseurl: "/newchallenge"
-url: "http://calvinmcgee.github.io/newchallenge"
-destination: _site_dev
+url: "https://develop.newchallenge.se"
