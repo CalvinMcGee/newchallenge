@@ -4,7 +4,7 @@
 </div>
 
 <div class="top-bar" id="top-menu">
-  <nav class="top-bar-right">
+  <nav role="navigation" class="top-bar-right">
     <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-submenu-toggle="true">
       {% for item in site.data.navigation.toc %}
         <li class="{% if item.url == page.url %}active{% endif %}">
