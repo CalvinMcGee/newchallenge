@@ -69,7 +69,7 @@ defaults:
   - scope:
       path: "" # an empty string here means all files in the project
     values:
-      image: "/assets/social_share.png"
+      image: "/assets/social-share.png"
       layout: "page"
   - scope:
       path: "pages" # an empty string here means all files in the project
