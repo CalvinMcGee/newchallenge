@@ -21,6 +21,7 @@ phone_short: "+46735833329"
 description: New Challenge erbjuder idrottspsykologisk rådgivning och föreläsningar.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://newchallenge.se" # the base hostname & protocol for your site, e.g. http://example.com
+instagram_access_token: ""
 
 # Build settings
 host: 0.0.0.0
