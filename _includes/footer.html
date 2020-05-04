@@ -56,6 +56,11 @@
 
   $(document).ready(function() {
     $('#instagram-feed').spectragram({
+      complete: function() {
+        $('#instagram-feed img').each(function() {
+          $(this).after('<span>'+$(this).attr('alt')+'</span>');
+        });
+      },
       size: 'medium',
       wrapEachWith: '<div class="cell"></div>',
     });
