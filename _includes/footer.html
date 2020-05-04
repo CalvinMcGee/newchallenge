@@ -36,6 +36,7 @@
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
 {% asset _foundation/foundation.min.js %}
+{% asset spectragram.min.js %}
 {% asset app.js %}
 <script src="https://www.google.com/recaptcha/api.js?hl=sv" async defer></script>
 <script>
@@ -47,4 +48,17 @@
    ga('create', 'UA-61281982-1', 'auto');
    ga('send', 'pageview');
  </script>
-<!-- {{ site.instagram_access_token | default: 'No Instagram access token available' }} -->
+{% if site.instagram_access_token and site.instagram_access_token != '' %}
+<script>
+  jQuery.fn.spectragram.accessData = {
+    accessToken: '{{ site.instagram_access_token }}'
+  };
+
+  $(document).ready(function() {
+    $('#instagram-feed').spectragram({
+      size: 'medium',
+      wrapEachWith: '<div class="cell"></div>',
+    });
+  })
+</script>
+{% endif %}

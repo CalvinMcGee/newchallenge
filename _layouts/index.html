@@ -29,3 +29,11 @@ layout: default
     </div>
   </section>
 {% endif %}
+
+{% if site.instagram_access_token and site.instagram_access_token != '' %}
+  <section class="grid-container feature-section padding-vertical-2">
+    <h2 class="feature-section__headline">{{ site.data.home.instagram.title }}</h2>
+    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-3" id="instagram-feed">
+    </div>
+  </section>
+{% endif %}
