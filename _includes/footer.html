@@ -36,7 +36,11 @@
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
 {% asset _foundation/foundation.min.js %}
-{% asset spectragram.min.js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/locale/sv.min.js"></script>
+<script>
+  moment.locale('sv');
+</script>
 {% asset app.js %}
 <script src="https://www.google.com/recaptcha/api.js?hl=sv" async defer></script>
 <script>
@@ -49,21 +53,18 @@
    ga('send', 'pageview');
  </script>
 {% if site.instagram_access_token and site.instagram_access_token != '' %}
-<script>
-  jQuery.fn.spectragram.accessData = {
-    accessToken: '{{ site.instagram_access_token }}'
-  };
-
-  $(document).ready(function() {
-    $('#instagram-feed').spectragram({
-      complete: function() {
-        $('#instagram-feed img').each(function() {
-          $(this).after('<span>'+$(this).attr('alt')+'</span>');
-        });
+  {% asset instafeed.min.js %}
+  <script type="text/javascript">
+    var feed = new Instafeed({
+      accessToken: '{{ site.instagram_access_token }}',
+      limit: 12,
+      target: 'instagram-feed',
+      transform: function(item) {
+        item.timestamp = moment(item.timestamp).fromNow();
+        return item;
       },
-      size: 'medium',
-      wrapEachWith: '<div class="cell"></div>',
+      template: {% raw %}'<div class="cell"><div class="card"><img title="{{caption}}" src="{{image}}" /><div class="card-divider">{{timestamp}}</div><div class="card-section">{{caption}}</div></div></div>'{% endraw %},
     });
-  })
-</script>
+    feed.run();
+  </script>
 {% endif %}
