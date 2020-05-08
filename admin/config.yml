@@ -76,13 +76,6 @@ collections: # A list of collections the CMS should be able to edit
                 - label: "Body"
                   name: "body"
                   widget: "markdown"
-            - label: "Instagram"
-              name: "instagram"
-              widget: "object"
-              fields:
-                - label: "Title"
-                  name: "title"
-                  widget: "string"
   - name: "navigation"
     label: "Navigation"
     files:
@@ -124,3 +117,9 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Footer"
             name: "footer_text"
             widget: "markdown"
+          - label: "Number of Instagram pictures"
+            name: "instagram_pictures"
+            widget: "number"
+            valueType: "int"
+            min: 3
+            step: 3
