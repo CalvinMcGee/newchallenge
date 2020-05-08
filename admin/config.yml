@@ -121,6 +121,5 @@ collections: # A list of collections the CMS should be able to edit
             name: "instagram_pictures"
             widget: "number"
             valueType: "int"
-            default: 6
             min: 3
             step: 3
