@@ -76,6 +76,13 @@ collections: # A list of collections the CMS should be able to edit
                 - label: "Body"
                   name: "body"
                   widget: "markdown"
+            - label: "Instagram"
+              name: "instagram"
+              widget: "object"
+              fields:
+                - label: "Title"
+                  name: "title"
+                  widget: "string"
   - name: "navigation"
     label: "Navigation"
     files:

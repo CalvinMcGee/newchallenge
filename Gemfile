@@ -23,6 +23,7 @@ group :jekyll_plugins do
   gem "execjs", "~> 2.7.0"
   gem "therubyracer", "~> 0.12.3"
   gem "jekyll-assets", "~> 3.0.12"
+  gem 'mini_magick', '~> 4.10', '>= 4.10.1'
   gem 'jekyll-seo-tag', '~> 2.5'
   gem 'jekyll-sitemap', '~> 1.3', '>= 1.3.1'
 end

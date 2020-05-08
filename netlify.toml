@@ -1,9 +1,9 @@
 [build]
-  command = "jekyll build --config _config.yml"
+  command = "rake;jekyll build --config _config.yml,_instagram.yml"
   publish = "_site"
 
 [context.develop]
-  command = "jekyll build --config _config.yml,_dev.yml"
+  command = "rake;jekyll build --config _config.yml,_dev.yml,_instagram.yml"
 
 [[redirects]]
   from = "/event/*"
