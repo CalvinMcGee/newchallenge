@@ -11,6 +11,13 @@
           <p><i class="fas fa-mobile" aria-hidden="true"></i><a href="tel:{{ site.phone_short }}">{{ site.phone }}</a></p>
           <p><i class="fas fa-envelope-open-text" aria-hidden="true"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         </div>
+        <div class="cell medium-4">
+          <h4 class="footer__title">Instagram</h4>
+          {% if site.instagram_access_token and site.instagram_access_token != '' %}
+            <div class="grid-x grid-padding-x grid-padding-y small-up-3" id="instagram-feed">
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
@@ -57,13 +64,9 @@
   <script type="text/javascript">
     var feed = new Instafeed({
       accessToken: '{{ site.instagram_access_token }}',
-      limit: 12,
+      limit: 9,
       target: 'instagram-feed',
-      transform: function(item) {
-        item.timestamp = moment(item.timestamp).fromNow();
-        return item;
-      },
-      template: {% raw %}'<div class="cell"><div class="card"><img title="{{caption}}" src="{{image}}" /><div class="card-divider">{{timestamp}}</div><div class="card-section">{{caption}}</div></div></div>'{% endraw %},
+      template: {% raw %}'<div class="cell"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a></div>'{% endraw %},
     });
     feed.run();
   </script>
