@@ -117,3 +117,10 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Footer"
             name: "footer_text"
             widget: "markdown"
+          - label: "Number of Instagram pictures"
+            name: "instagram_pictures"
+            widget: "number"
+            valueType: "int"
+            default: 6
+            min: 3
+            step: 3
