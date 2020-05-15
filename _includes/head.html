@@ -5,6 +5,8 @@
 
   <title>{% if page.url == '/' %}{{ page.title }}{% else if page.title %}{{ page.title }} - {% endif %}{% if page.url != '/' %}{{ site.site_title | escape }}{% endif %}</title>
 
+  <!-- SITE BUILD TIME: {{site.time}} -->
+
   {% seo title=false %}
 
   {% asset main.css %}
