@@ -66,6 +66,10 @@ exclude:
 form:
   success: "/success/"
 
+collections:
+  blog:
+    output: true
+
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
@@ -76,6 +80,11 @@ defaults:
       path: "pages" # an empty string here means all files in the project
     values:
       permalink: "/:basename/"
+  - scope:
+      path: "_blog"
+    values:
+      image: "/assets/social-share.jpg"
+      layout: "blog"
   - scope:
       path: "admin"
     values:
