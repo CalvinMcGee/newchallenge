@@ -30,21 +30,23 @@ layout: default
   </section>
 {% endif %}
 
-<section class="grid-container padding-bottom-2">
-  <div class="content-hero grid-x grid-padding-x align-center-middle text-center">
-    <div class="cell">
-      <h2 class="feature-section__headline">{{ site.data.home.blog.title }}</h2>
-    </div>
-    <div class="cell">
-      <div class="grid-x small-up-2 medium-up-4">
-        {% for blog_post in site.blog limit:site.data.home.blog.images %}
-          <div class="cell">
-            <a href="{{ blog_post.url }}">
-              {% asset '{{ blog_post.image }}' magick:resize=250x250^ magick:gravity=center magick:crop=250x250+0+0 %}
-            </a>
-          </div>
-        {% endfor %}
+{% if site.blog.size > 0 %}
+  <section class="grid-container padding-bottom-2">
+    <div class="content-hero grid-x grid-padding-x align-center-middle text-center">
+      <div class="cell">
+        <h2 class="feature-section__headline">{{ site.data.home.blog.title }}</h2>
+      </div>
+      <div class="cell">
+        <div class="grid-x small-up-2 medium-up-4">
+          {% for blog_post in site.blog limit:site.data.home.blog.images %}
+            <div class="cell">
+              <a href="{{ blog_post.url }}">
+                {% asset '{{ blog_post.image }}' magick:resize=250x250^ magick:gravity=center magick:crop=250x250+0+0 %}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{% endif %}
