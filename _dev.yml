@@ -1,1 +1,7 @@
 url: "https://develop.newchallenge.se"
+
+assets:
+  compress:
+    css: false
+    javascript: false
+  digest: false
