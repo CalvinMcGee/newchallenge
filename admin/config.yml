@@ -83,6 +83,10 @@ collections: # A list of collections the CMS should be able to edit
                 - label: "Title"
                   name: "title"
                   widget: "string"
+                - label: "Number of images"
+                  name: "images"
+                  widget: "number"
+                  valueType: "int"
   - name: "navigation"
     label: "Navigation"
     files:

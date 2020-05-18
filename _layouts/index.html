@@ -37,7 +37,7 @@ layout: default
     </div>
     <div class="cell">
       <div class="grid-x small-up-2 medium-up-4">
-        {% for blog_post in site.blog %}
+        {% for blog_post in site.blog limit:site.data.home.blog.images %}
           <div class="cell">
             <a href="{{ blog_post.url }}">
               {% asset '{{ blog_post.image }}' magick:resize=250x250^ magick:gravity=center magick:crop=250x250+0+0 %}
