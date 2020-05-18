@@ -42,6 +42,7 @@ assets:
     - _assets/img
     - _assets/scss
     - _assets/js
+    - _blog_images
 
 language: "sv"
 lang: "sv"
@@ -83,7 +84,7 @@ defaults:
   - scope:
       path: "_blog"
     values:
-      image: "/assets/social-share.jpg"
+      image: "blog_image.jpg"
       layout: "blog"
   - scope:
       path: "admin"
