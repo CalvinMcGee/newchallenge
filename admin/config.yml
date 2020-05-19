@@ -36,6 +36,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "blog"
+    label: "Blog"
+    folder: "_blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish date", name: "date", widget: "datetime"}
+      - {label: "Featured image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "home"
     label: "Home"
     files:
