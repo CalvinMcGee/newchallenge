@@ -41,7 +41,7 @@ layout: default
           {% for blog_post in site.blog limit:site.data.home.blog.images %}
             <div class="cell">
               <a href="{{ blog_post.url }}">
-                {% asset '{{ blog_post.image }}' magick:resize=250x250^ magick:gravity=center magick:crop=250x250+0+0 alt='{{ blog_post.title }}' %}
+                {% asset '{{ blog_post.image | remove: "/assets/" }}' magick:resize=250x250^ magick:gravity=center magick:crop=250x250+0+0 alt='{{ blog_post.title }}' %}
               </a>
             </div>
           {% endfor %}

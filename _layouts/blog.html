@@ -4,7 +4,10 @@ layout: default
 <article>
   <section class="grid-container">
     <div class="grid-x grid-padding-x align-center-middle text-center">
-      <div class="cell padding-vertical-2">
+      <div class="cell padding-bottom-2">
+        {% asset '{{ page.image | remove: "/assets/" }}' %}
+      </div>
+      <div class="cell padding-bottom-2">
         <h2 class="content-hero__title">{{ page.title }}</h2>
       </div>
     </div>
