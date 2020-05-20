@@ -70,6 +70,7 @@ form:
 collections:
   blog:
     output: true
+    permalink: /:collection/:name/
 
 defaults:
   - scope:
