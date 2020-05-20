@@ -4,4 +4,3 @@ assets:
   compress:
     css: false
     javascript: false
-  digest: false

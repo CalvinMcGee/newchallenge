@@ -37,7 +37,7 @@ assets:
     css: true
     javascript: true
   prefix: "/assets"
-  digest: true
+  digest: false
   sources:
     - _assets/img
     - _assets/scss
