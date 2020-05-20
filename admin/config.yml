@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: "uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "_blog_images" # Media files will be stored in the repo under _blog_images
 collections: # A list of collections the CMS should be able to edit
   # POSTS
   #- name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -28,7 +28,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Page"
     folder: "pages"
     sort: "title:asc"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
@@ -36,6 +36,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "blog"
+    label: "Blog"
+    folder: "_blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish date", name: "date", widget: "datetime"}
+      - {label: "Featured image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "home"
     label: "Home"
     files:
@@ -76,6 +85,17 @@ collections: # A list of collections the CMS should be able to edit
                 - label: "Body"
                   name: "body"
                   widget: "markdown"
+          - label: "Blog"
+            name: "blog"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Number of images"
+                name: "images"
+                widget: "number"
+                valueType: "int"
   - name: "navigation"
     label: "Navigation"
     files:
