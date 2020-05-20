@@ -84,7 +84,7 @@ defaults:
   - scope:
       path: "_blog"
     values:
-      image: "blog_image.jpg"
+      image: "/assets/blog_image.jpg"
       layout: "blog"
   - scope:
       path: "admin"
