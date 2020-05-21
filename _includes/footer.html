@@ -59,9 +59,9 @@
   <script type="text/javascript">
     var feed = new Instafeed({
       accessToken: '{{ site.instagram_access_token }}',
-      limit: {{ site.data.site.instagram_pictures }},
+      limit: {{ site.data.site.instagram.pictures }},
       target: 'instagram-feed',
-      template: {% raw %}'<div class="cell"><a href="{{link}}" target="_blank"><img title="{{caption}}" src="{{image}}" /></a></div>'{% endraw %},
+      template: '<div class="cell"><a href="{{site.data.site.instagram.account}}" target="_blank">{% raw %}<img title="{{caption}}" src="{{image}}" />{% endraw %}</a></div>',
     });
     feed.run();
   </script>
