@@ -3,11 +3,15 @@ layout: default
 ---
 <article>
   <section class="grid-container">
-    <div class="grid-x grid-padding-x align-center-middle text-center">
-      <div class="cell padding-bottom-2">
-        {% asset '{{ page.image | remove: "/assets/" }}' %}
+    <div class="grid-x align-middle">
+      <div class="cell shrink">
+        <img src="http://via.placeholder.com/150" />
       </div>
-      <div class="cell padding-bottom-2">
+      <div class="cell auto">
+        <h2>Marcus Nyqvist</h2>
+        <div class="date">{{ page.date | date_to_xmlschema }}</div>
+      </div>
+      <div class="cell">
         <h2 class="content-hero__title">{{ page.title }}</h2>
       </div>
     </div>
