@@ -3,10 +3,10 @@
   publish = "_site"
 
 [context.develop]
-  command = "rake;jekyll build --config _config.yml,_dev.yml,_instagram.yml --host develop.newchallenge.se"
+  command = "rake;jekyll build --config _config.yml,_dev.yml,_instagram.yml"
 
 [context.test-blogs]
-  command = "rake;jekyll build --config _config.yml,_dev.yml,_instagram.yml --host test-blogs.newchallenge.se"
+  command = "rake;jekyll build --config _config.yml,_dev.yml,_test-blogs.yml,_instagram.yml"
 
 [[redirects]]
   from = "/event/*"
