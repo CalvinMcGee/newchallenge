@@ -12,7 +12,11 @@
         </div>
       </div>
       <div class="cell padding-vertical-1">
-        <h1 class="text-center header__title">Idrottspsykologisk rådgivning</h1>
+        {% if page.url == "/" %}
+          <h1 class="text-center header__title">Idrottspsykologisk rådgivning</h1>
+        {% else %}
+          <h2 class="text-center header__title">Idrottspsykologisk rådgivning</h2>
+        {% endif %}
         <h2 class="text-center header__subtitle">Marcus Nyqvist</h2>
       </div>
     </div>

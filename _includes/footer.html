@@ -43,8 +43,35 @@
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
 {% asset _foundation/foundation.min.js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/locale/sv.js"></script>
 {% asset app.js %}
 <script src="https://www.google.com/recaptcha/api.js?hl=sv" async defer></script>
+
+{% if site.instagram_access_token and site.instagram_access_token != '' %}
+ {% asset instafeed.min.js %}
+ <script type="text/javascript">
+   var feed = new Instafeed({
+     accessToken: '{{ site.instagram_access_token }}',
+     limit: {{ site.data.site.instagram.pictures }},
+     target: 'instagram-feed',
+     template: '<div class="cell"><a href="{{site.data.site.instagram.account}}" target="_blank">{% raw %}<img title="{{caption}}" src="{{image}}" />{% endraw %}</a></div>',
+   });
+   feed.run();
+ </script>
+{% endif %}
+
+<script>
+  $(document).ready(function() {
+    moment.locale('sv');
+
+    $('.date').text(
+      moment($('.date').text())
+        .format('D MMMM YYYY')
+    );
+  });
+</script>
+
 <script>
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,15 +81,3 @@
    ga('create', 'UA-61281982-1', 'auto');
    ga('send', 'pageview');
  </script>
-{% if site.instagram_access_token and site.instagram_access_token != '' %}
-  {% asset instafeed.min.js %}
-  <script type="text/javascript">
-    var feed = new Instafeed({
-      accessToken: '{{ site.instagram_access_token }}',
-      limit: {{ site.data.site.instagram.pictures }},
-      target: 'instagram-feed',
-      template: '<div class="cell"><a href="{{site.data.site.instagram.account}}" target="_blank">{% raw %}<img title="{{caption}}" src="{{image}}" />{% endraw %}</a></div>',
-    });
-    feed.run();
-  </script>
-{% endif %}
