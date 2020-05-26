@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: test-blogs # Branch to update (optional; defaults to master)
 media_folder: "_blog_images" # Media files will be stored in the repo under _blog_images
+public_folder: "assets"
 collections: # A list of collections the CMS should be able to edit
   # POSTS
   #- name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -43,7 +44,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish date", name: "date", widget: "datetime"}
-      - {label: "Featured image", name: "image", widget: "image", required: false}
+      - {label: "Featured image", name: "image", widget: "image", required: false, hint: "1200x628 px"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "home"
     label: "Home"
