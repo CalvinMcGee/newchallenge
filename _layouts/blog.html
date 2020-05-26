@@ -2,22 +2,26 @@
 layout: default
 ---
 <article>
-  <section class="grid-container">
-    <div class="grid-x align-middle">
-      <div class="cell shrink">
-        <img src="http://via.placeholder.com/150" />
+  <section class="grid-container padding-vertical-1">
+    <div class="grid-x grid-padding-x align-middle">
+      <div class="cell small-3 medium-2 large-1">
+        {% asset 'marcus_nyqvist.jpg' magick:resize=150x150^ magick:gravity=center magick:crop=150x150+0+0 alt='Marcus Nyqvist - Idrotsspsykologisk rådgivare' class='blog__author-image' %}
       </div>
-      <div class="cell auto">
-        <h2>Marcus Nyqvist</h2>
-        <div class="date">{{ page.date | date_to_xmlschema }}</div>
+      <div class="cell small-9 medium-10 large-11">
+        <h2 class="blog__author">Marcus Nyqvist</h2>
+        <h3 class="blog__subtitle">Idrottspsykologisk rådgivare</h3>
+        <h3 class="date blog__subtitle">{{ page.date | date_to_xmlschema }}</h3>
       </div>
+    </div>
+    <div class="grid-x">
       <div class="cell">
-        <h1 class="content-hero__title">{{ page.title }}</h1>
+        <h1 class="blog__title">{{ page.title }}</h1>
       </div>
     </div>
   </section>
 
-  <section style="background-image: url('{% asset '{{ page.image | remove: "/assets/" }}' @path %}');background-repeat: no-repeat;background-size: cover;background-position: center;padding-bottom: 25%;">
+  <section class="padding-bottom-2">
+    <div style="background-image: url('{% asset '{{ page.image | remove: "/assets/" }}' @path %}');background-repeat: no-repeat;background-size: cover;background-position: center;padding-bottom: 25%;"></div>
   </section>
 
   <section class="grid-container padding-bottom-2">
