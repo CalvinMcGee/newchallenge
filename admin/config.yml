@@ -44,7 +44,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish date", name: "date", widget: "datetime"}
-      - {label: "Featured image", name: "image", widget: "image", required: false}
+      - {label: "Featured image", name: "image", widget: "image", required: false, hint: "1200x628 px"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "home"
     label: "Home"
