@@ -5,10 +5,6 @@
   background-position: center;
   padding: 4rem 0 0;
 
-  &--golf {
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), asset_url("parallax_golf.jpg");
-  }
-
   &__wrapper {
     min-height: 50vh;
     background-color: rgba(255,255,255,0.50);
@@ -16,5 +12,22 @@
 
   &__block {
     margin-bottom: 4rem;
+  }
+}
+
+.no-webp,
+.no-js {
+  .parallax-content {
+    &--golf {
+      background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), asset_url("parallax_golf.webp");
+    }
+  }
+}
+
+.webp {
+  .parallax-content {
+    &--golf {
+      background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), asset_url("parallax_golf.webp");
+    }
   }
 }
