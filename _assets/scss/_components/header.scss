@@ -1,5 +1,4 @@
 header {
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), asset_url("header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -47,5 +46,18 @@ header {
     font-weight: 600;
     font-size: 2rem;
     font-style: italic;
+  }
+}
+
+.webp {
+  header {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), asset_url("header.webp");
+  }
+}
+
+.no-js,
+.no-webp {
+  header {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), asset_url("header.jpg");
   }
 }
