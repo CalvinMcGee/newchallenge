@@ -26,6 +26,7 @@ group :jekyll_plugins do
   gem 'mini_magick', '~> 4.10', '>= 4.10.1'
   gem 'jekyll-seo-tag', '~> 2.5'
   gem 'jekyll-sitemap', '~> 1.3', '>= 1.3.1'
+  gem 'rake', '~> 13.0.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
