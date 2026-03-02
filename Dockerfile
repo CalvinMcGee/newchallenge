@@ -4,5 +4,5 @@ WORKDIR /app
 
 COPY Gemfile* ./
 
-RUN gem install bundler && \
-bundle install -j 20
+RUN gem install bundler -v 2.3.26 && \
+bundle _2.3.26_ install -j 20
