@@ -1,14 +1,32 @@
+---
+import { site } from "../config/site";
+
+type NavItem = {
+  title: string;
+  url: string;
+  items?: NavItem[];
+};
+
+const navItems = site.nav as NavItem[];
+---
+
 <nav class="site-nav" aria-label="Main navigation">
   <div class="content-wrap">
-    <ul>
-      <li><a href="/">Hem</a></li>
-      <li><a href="/tjanster-pris/">Tjanster</a></li>
-      <li><a href="/tjanster-pris/idrottspsykologisk-forelasning/">Idrottspsykologisk forelasning</a></li>
-      <li><a href="/tjanster-pris/individuell-radgivning/">Individuell radgivning</a></li>
-      <li><a href="/om-foretaget/">Om foretaget</a></li>
-      <li><a href="/om-foretaget/natverk-samarbeten/">Natverk och samarbeten</a></li>
-      <li><a href="/om-sidan/">Om sidan</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+    <ul class="site-nav-list">
+      {navItems.map((item) => (
+        <li class="site-nav-item">
+          <a href={item.url}>{item.title}</a>
+          {item.items?.length ? (
+            <ul class="site-subnav-list">
+              {item.items.map((subItem) => (
+                <li class="site-subnav-item">
+                  <a href={subItem.url}>{subItem.title}</a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </li>
+      ))}
     </ul>
   </div>
 </nav>
