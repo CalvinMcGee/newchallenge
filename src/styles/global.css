@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 :root {
+  --white: #fefefe;
   --bg: #f5f7f8;
   --surface: #ffffff;
   --surface-soft: #eaf0f2;
   --text: #1b2a31;
   --muted: #4a606b;
   --border: #c6d2d8;
-  --accent: #2f7f73;
+  --primary: #534a8c;
+  --secondary: #bf396a;
+  --success: #428c62;
+  --warning: #d9c666;
+  --alert: #f24b4b;
+  --accent: var(--primary);
 }
 
 * {
@@ -19,6 +25,222 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, #edf3f5 0%, #f5f7f8 30%, #f5f7f8 100%);
+}
+
+@layer base {
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  p,
+  blockquote,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+
+  em,
+  i {
+    font-style: italic;
+    line-height: inherit;
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+    line-height: inherit;
+  }
+
+  small {
+    font-size: 80%;
+    line-height: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Open Sans", "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1875rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  h5 {
+    font-size: 1.0625rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 40rem) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.9375rem;
+    }
+
+    h4 {
+      font-size: 1.5625rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+  }
+
+  a {
+    line-height: inherit;
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  a:hover,
+  a:focus {
+    color: color-mix(in srgb, var(--accent) 84%, black);
+    text-decoration: none;
+  }
+
+  a img {
+    border: 0;
+  }
+
+  hr {
+    clear: both;
+    height: 0;
+    margin: 1.25rem auto;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  ul,
+  ol,
+  dl {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    list-style-position: outside;
+  }
+
+  ul,
+  ol {
+    margin-left: 1.25rem;
+  }
+
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-left: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  dl dt {
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+  }
+
+  blockquote {
+    margin: 0 0 1rem;
+    padding: 0.5625rem 1.25rem 0 1.1875rem;
+    border-left: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  blockquote p {
+    color: inherit;
+  }
+
+  cite {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+
+  cite::before {
+    content: "\2014 \0020";
+  }
+
+  abbr,
+  abbr[title] {
+    border-bottom: 1px dotted currentcolor;
+    cursor: help;
+    text-decoration: none;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  code {
+    padding: 0.125rem 0.3125rem 0.0625rem;
+    border: 1px solid var(--border);
+    background-color: var(--surface-soft);
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: 400;
+    color: var(--text);
+  }
+
+  kbd {
+    margin: 0;
+    padding: 0.125rem 0.25rem 0;
+    border-radius: 0.25rem;
+    background-color: var(--surface-soft);
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    color: var(--text);
+  }
 }
 
 .site-shell {
