@@ -1,0 +1,40 @@
+---
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import {
+  faChalkboardTeacher,
+  faEnvelopeOpenText,
+  faMobile,
+  faUser
+} from "@fortawesome/free-solid-svg-icons";
+
+interface Props {
+  name: "fa-mobile" | "fa-envelope-open-text" | "fa-user" | "fa-chalkboard-teacher";
+  class?: string;
+  label?: string;
+}
+
+const { name, class: className = "", label } = Astro.props;
+
+const icons = {
+  "fa-mobile": faMobile,
+  "fa-envelope-open-text": faEnvelopeOpenText,
+  "fa-user": faUser,
+  "fa-chalkboard-teacher": faChalkboardTeacher
+} as const;
+
+const selected = icons[name];
+const classes = className.split(" ").filter(Boolean);
+const svg = icon(selected, {
+  classes,
+  attributes: label
+    ? {
+        role: "img",
+        "aria-label": label
+      }
+    : {
+        "aria-hidden": "true"
+      }
+}).html.join("");
+---
+
+<Fragment set:html={svg} />
