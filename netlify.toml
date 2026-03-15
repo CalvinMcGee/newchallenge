@@ -1,3 +1,3 @@
 [build]
-  command = "pnpm build"
+  command = "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && pnpm build"
   publish = "dist"
