@@ -1,6 +1,9 @@
 ---
+import { marked } from "marked";
 import Icon from "./Icon.astro";
 import { site } from "../config/site";
+
+const footerHtml = marked.parse(site.footer.text) as string;
 ---
 
 <footer class="site-footer">
@@ -8,11 +11,7 @@ import { site } from "../config/site";
     <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-2 py-6 md:grid-cols-3">
       <section>
         <h4 class="text-[var(--white)]">{ site.title }</h4>
-        {
-          site.footer.text.map((paragraph) => (
-            <p>{paragraph}</p>
-          ))
-        }
+        <Fragment set:html={footerHtml} />
       </section>
       <section>
         <h4 class="text-[var(--white)]">{ site.footer.contact }</h4>

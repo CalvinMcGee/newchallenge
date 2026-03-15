@@ -52,10 +52,9 @@ Skicka en intresseanmälan här på hemsidan direkt eller till [marcus@newchalle
 Eller ring på [0735-83 33 29](tel:+46735833329).`,
   },
   footer: {
-    text: [
-      "Idrottpsykologisk rådgivning för individ och grupp.",
-      "Föreläsning kring psykologiska faktorer som påverkar välmående och prestation."
-    ],
+    text: `Idrottpsykologisk rådgivning för individ och grupp.
+
+Föreläsning kring psykologiska faktorer som påverkar välmående och prestation.`,
     contact: "Kontakt",
     instagram: {
       title: "Instagram",
