@@ -17,6 +17,7 @@ const { title, frontmatter } = Astro.props;
 const pageTitle = title ?? frontmatter?.title;
 const isHomePage = Astro.url.pathname === "/";
 const documentTitle = isHomePage || !pageTitle ? site.title : `${pageTitle} - ${site.title}`;
+const visiblePageTitle = pageTitle ?? site.title;
 ---
 
 <!doctype html>
@@ -25,16 +26,17 @@ const documentTitle = isHomePage || !pageTitle ? site.title : `${pageTitle} - ${
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{documentTitle}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   </head>
   <body>
     <div class="site-shell">
       <SiteHeader />
       <SiteNav />
-      <main class="page-main">
-        <div class="content-wrap">
-          <article class="page-card">
+      <main class="flex-1 py-8">
+        <div class="mx-auto w-full max-w-6xl px-2">
+          <article>
+            <h1 class="mb-6 text-center text-2xl font-semibold italic">{visiblePageTitle}</h1>
             <slot />
           </article>
         </div>
