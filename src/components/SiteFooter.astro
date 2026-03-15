@@ -1,5 +1,46 @@
+---
+import { site } from "../config/site";
+---
+
 <footer class="site-footer">
-  <div class="content-wrap">
-    <p>Placeholder footer content for legal text and secondary links.</p>
+  <div class="bg-[var(--secondary)] text-[var(--footer-text)] [&_a]:text-[var(--footer-text)] [&_a:focus]:text-[var(--footer-text)] [&_a:hover]:text-[var(--footer-text)]">
+    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-2 py-12 md:grid-cols-3">
+      <section>
+        <h4 class="text-[var(--white)]">{ site.title }</h4>
+        {
+          site.footer.text.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))
+        }
+      </section>
+      <section>
+        <h4 class="text-[var(--white)]">{ site.footer.contact }</h4>
+        <p><i class="fas fa-mobile" aria-hidden="true"></i><a href={`tel:${site.phone_short}`}>{ site.phone }</a></p>
+        <p><i class="fas fa-envelope-open-text" aria-hidden="true"></i><a href={`mailto:${site.email}`}>{ site.email }</a></p>
+      </section>
+      <section>
+        <h4 class="text-[var(--white)]">{ site.footer.instagram.title }</h4>
+        <p>
+          Placeholder paragraph content for the third footer column with a
+          <a href="#">placeholder link</a>.
+        </p>
+      </section>
+    </div>
+  </div>
+  <div class="bg-[var(--footer-bg-dark)] text-[var(--footer-text-dark)] [&_a]:text-[var(--footer-text-dark)] [&_a:focus]:text-[var(--footer-text-dark)] [&_a:hover]:text-[var(--footer-text-dark)]">
+    <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-2 py-5 md:grid-cols-2">
+      <div>{ site.title } &copy; Copyright { new Date().getFullYear() }</div>
+      <div class="md:justify-self-end md:text-right">
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 md:justify-end">
+          {
+            site.nav.map((item) => (
+              <li>
+                <a href={item.url}>{item.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>

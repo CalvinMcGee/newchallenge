@@ -43,4 +43,14 @@ export const site = {
       url: "#kontakt"
     }
   ],
+  footer: {
+    text: [
+      "Idrottpsykologisk rådgivning för individ och grupp.",
+      "Föreläsning kring psykologiska faktorer som påverkar välmående och prestation."
+    ],
+    contact: "Kontakt",
+    instagram: {
+      title: "Instagram",
+    },
+  }
 };
