@@ -5,9 +5,73 @@ import { site } from "../config/site";
 const contactHtml = marked.parse(site.contact.text) as string;
 ---
 
-<section id="kontakt" class="contact-section" aria-labelledby="contact-title">
-  <div class="content-wrap">
-    <h2 id="contact-title">Kontakt</h2>
-    <Fragment set:html={contactHtml} />
+<section id="kontakt" aria-labelledby="contact-title">
+  <div
+    class="bg-cover bg-center bg-no-repeat md:bg-fixed"
+    style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/img/parallax_golf.jpg'); background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), image-set(url('/img/parallax_golf.webp') type('image/webp') 1x, url('/img/parallax_golf.jpg') type('image/jpeg') 1x);"
+  >
+    <div>
+      <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-2 py-10 md:grid-cols-2 md:gap-10 md:py-14">
+        <article class="rounded-xl p-6 md:p-8" style="background-color: rgb(from var(--warning) r g b / 0.6);">
+          <div
+            class="text-[var(--text)] text-center [&_a]:font-semibold [&_a]:text-[var(--primary)] [&_a:hover]:underline [&_p]:mb-4 [&_p]:leading-relaxed"
+            set:html={contactHtml}
+          ></div>
+        </article>
+
+        <aside class="overflow-hidden rounded-xl bg-[var(--white)]/92">
+          <h2 class="bg-[var(--warning)] px-6 py-6 text-4xl text-center text-black md:px-8">
+            {site.contact.title}
+          </h2>
+          <form class="space-y-4 px-6 py-6 md:px-8 md:py-8" method="post" action="/success" aria-label="Kontaktformulär" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div>
+              <label class="mb-1 block text-sm font-semibold text-[var(--text)]" for="contact-name">Namn</label>
+              <input
+                class="w-full rounded-md border border-[var(--border)] bg-[var(--white)] px-3 py-2 text-[var(--text)] focus:border-[var(--secondary)] focus:outline-none"
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Namn"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="mb-1 block text-sm font-semibold text-[var(--text)]" for="contact-email">E-post</label>
+              <input
+                class="w-full rounded-md border border-[var(--border)] bg-[var(--white)] px-3 py-2 text-[var(--text)] focus:border-[var(--secondary)] focus:outline-none"
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="E-post"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="mb-1 block text-sm font-semibold text-[var(--text)]" for="contact-message">Meddelande</label>
+              <textarea
+                class="min-h-36 w-full rounded-md border border-[var(--border)] bg-[var(--white)] px-3 py-2 text-[var(--text)] focus:border-[var(--secondary)] focus:outline-none"
+                id="text"
+                name="text"
+                placeholder="Meddelande"
+                required
+              ></textarea>
+            </div>
+
+            <div class="g-recaptcha" data-sitekey="6Lcspb4UAAAAAF4zKBwuwhzDMfZ9PTqqaymidijI"></div>
+
+            <button
+              class="inline-flex rounded-md bg-[var(--primary)] px-5 py-2.5 font-semibold text-[var(--white)] transition hover:bg-[var(--secondary-20-dark)]"
+              type="submit"
+            >
+              Skicka
+            </button>
+          </form>
+        </aside>
+      </div>
+    </div>
   </div>
 </section>
