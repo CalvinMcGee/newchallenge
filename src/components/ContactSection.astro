@@ -1,6 +1,13 @@
+---
+import { marked } from "marked";
+import { site } from "../config/site";
+
+const contactHtml = marked.parse(site.contact.text) as string;
+---
+
 <section id="kontakt" class="contact-section" aria-labelledby="contact-title">
   <div class="content-wrap">
     <h2 id="contact-title">Kontakt</h2>
-    <p>Placeholder text for contact details, opening hours, and form links.</p>
+    <Fragment set:html={contactHtml} />
   </div>
 </section>
