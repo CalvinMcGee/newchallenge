@@ -43,6 +43,10 @@ export const site = {
       url: "#kontakt"
     }
   ],
+  header: {
+    title: "Idrottspsykologisk rådgivning",
+    subtitle: "Marcus Nyqvist"
+  },
   contact: {
     title: "Kontakta oss",
     text: `Kontakta Marcus Nyqvist om du har frågor kring rådgivning eller föreläsningar.
