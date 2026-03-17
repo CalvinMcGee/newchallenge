@@ -47,10 +47,10 @@ const visiblePageTitle = pageTitle ?? site.title;
         </div>
         <SiteHeader />
       </div>
-      <main class="flex-1 py-8">
+      <main class="flex-1 py-12 md:py-24">
         <div class="mx-auto w-full max-w-6xl px-2">
           <article>
-            <h1 class="mb-6 text-center text-2xl font-semibold italic whitespace-pre-line">{visiblePageTitle}</h1>
+            <h1 class="mb-8 md:mb-18 text-center text-2xl font-semibold italic whitespace-pre-line">{visiblePageTitle}</h1>
             <slot />
             {frontmatter?.feature && <FeatureSection feature={frontmatter.feature} />}
           </article>
