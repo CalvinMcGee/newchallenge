@@ -12,12 +12,12 @@ const contactHtml = marked.parse(site.contact.text) as string;
   >
     <div>
       <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-2 py-10 md:grid-cols-2 md:gap-10 md:py-14">
-        <article class="rounded-xl p-6 md:p-8" style="background-color: rgb(from var(--warning) r g b / 0.6);">
+        <section class="rounded-xl p-6 md:p-8" style="background-color: rgb(from var(--warning) r g b / 0.6);">
           <div
             class="text-[var(--text)] text-center [&_a]:font-semibold [&_a]:text-[var(--primary)] [&_a:hover]:underline [&_p]:mb-4 [&_p]:leading-relaxed"
             set:html={contactHtml}
           ></div>
-        </article>
+        </section>
 
         <aside class="overflow-hidden rounded-xl bg-[var(--white)]/92">
           <h2 class="bg-[var(--warning)] px-6 py-6 text-4xl text-center text-black md:px-8">
