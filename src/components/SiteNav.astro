@@ -36,7 +36,7 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
     </div>
 
     <div class="hidden md:block">
-      <ul class="flex items-center justify-center gap-1">
+      <ul class="m-0 flex list-none items-center justify-center gap-1 p-0">
         {
           navItems.map((item) => {
             const sectionCurrent = isSectionCurrent(item);
@@ -62,7 +62,7 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
 
                 {item.items?.length ? (
                   <div class="invisible absolute left-1/2 top-full z-30 min-w-64 -translate-x-1/2 pt-2 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                    <ul class="bg-[rgb(255_255_255_/_0.94)] py-2 text-[var(--text)] shadow-[0_18px_50px_rgba(27,42,49,0.18)] backdrop-blur-md">
+                    <ul class="m-0 list-none bg-[rgb(255_255_255_/_0.94)] py-2 text-[var(--text)] shadow-[0_18px_50px_rgba(27,42,49,0.18)] backdrop-blur-md">
                       {item.items.map((subItem) => (
                         <li>
                           <a
@@ -89,7 +89,7 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
     </div>
 
     <div id="mobile-nav-panel" class="hidden py-3 md:hidden" data-mobile-nav-panel>
-      <ul class="space-y-2">
+      <ul class="m-0 list-none space-y-2 p-0">
         {
           navItems.map((item) => {
             const sectionCurrent = isSectionCurrent(item);
@@ -104,7 +104,7 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
                       </svg>
                     </summary>
-                    <ul class="mt-2 space-y-2 pl-4">
+                    <ul class="mt-2 list-none space-y-2 pl-4">
                       <li>
                         <a
                           href={item.url}

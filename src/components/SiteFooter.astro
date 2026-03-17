@@ -31,7 +31,7 @@ const footerHtml = marked.parse(site.footer.text) as string;
     <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-2 py-4 md:grid-cols-2">
       <div>{ site.title } &copy; Copyright { new Date().getFullYear() }</div>
       <div class="md:justify-self-end md:text-right">
-        <ul class="flex flex-wrap gap-x-4 gap-y-1 md:justify-end">
+        <ul class="m-0 flex list-none flex-wrap gap-x-4 gap-y-1 p-0 md:justify-end">
           {
             site.nav.map((item) => (
               <li>
