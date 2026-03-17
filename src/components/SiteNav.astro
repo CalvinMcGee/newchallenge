@@ -4,29 +4,177 @@ import { site } from "../config/site";
 type NavItem = {
   title: string;
   url: string;
-  items?: NavItem[];
+  items?: Array<{
+    title: string;
+    url: string;
+  }>;
 };
 
 const navItems = site.nav as NavItem[];
+const currentPath = Astro.url.pathname;
+
+const isCurrent = (url: string) => url !== "#kontakt" && currentPath === url;
+const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.some((subItem) => isCurrent(subItem.url));
 ---
 
-<nav class="site-nav" aria-label="Main navigation">
-  <div class="content-wrap">
-    <ul class="site-nav-list">
-      {navItems.map((item) => (
-        <li class="site-nav-item">
-          <a href={item.url}>{item.title}</a>
-          {item.items?.length ? (
-            <ul class="site-subnav-list">
-              {item.items.map((subItem) => (
-                <li class="site-subnav-item">
-                  <a href={subItem.url}>{subItem.title}</a>
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </li>
-      ))}
-    </ul>
+<nav class="bg-[linear-gradient(180deg,rgba(17,29,35,0.78)_0%,rgba(17,29,35,0.58)_68%,rgba(17,29,35,0)_100%)] text-[var(--white)]" aria-label="Main navigation">
+  <div class="mx-auto w-full max-w-6xl px-2">
+    <div class="flex items-center justify-between gap-4 py-3 md:hidden">
+      <a href="/" class="text-sm uppercase tracking-[0.2em] text-[var(--white)]/80">Meny</a>
+      <button
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center border border-[var(--white)]/35 bg-[var(--white)]/10 text-[var(--white)] backdrop-blur-sm"
+        aria-expanded="false"
+        aria-controls="mobile-nav-panel"
+        data-mobile-nav-toggle
+      >
+        <span class="sr-only">Visa meny</span>
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="hidden md:block">
+      <ul class="flex items-center justify-center gap-1">
+        {
+          navItems.map((item) => {
+            const sectionCurrent = isSectionCurrent(item);
+
+            return (
+              <li class="group relative">
+                <a
+                  href={item.url}
+                  class:list={[
+                    "inline-flex items-center gap-2 px-5 py-4 text-sm uppercase tracking-[0.12em] transition",
+                    sectionCurrent
+                      ? "bg-[var(--white)]/18 text-[var(--white)] backdrop-blur-sm"
+                      : "text-[var(--white)] hover:bg-[var(--white)]/12 hover:text-[var(--white)]"
+                  ]}
+                >
+                  <span>{item.title}</span>
+                  {item.items?.length ? (
+                    <svg class="h-4 w-4 transition group-hover:translate-y-0.5 group-focus-within:translate-y-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                  ) : null}
+                </a>
+
+                {item.items?.length ? (
+                  <div class="invisible absolute left-1/2 top-full z-30 min-w-64 -translate-x-1/2 pt-2 opacity-0 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <ul class="bg-[rgb(255_255_255_/_0.94)] py-2 text-[var(--text)] shadow-[0_18px_50px_rgba(27,42,49,0.18)] backdrop-blur-md">
+                      {item.items.map((subItem) => (
+                        <li>
+                          <a
+                            href={subItem.url}
+                            class:list={[
+                              "block px-5 py-3 text-center text-sm tracking-[0.08em] transition",
+                              isCurrent(subItem.url)
+                                ? "bg-[var(--surface-soft)] text-[var(--text)]"
+                                : "text-[var(--muted)] hover:bg-[var(--surface-soft)] hover:text-[var(--text)]"
+                            ]}
+                          >
+                            {subItem.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+
+    <div id="mobile-nav-panel" class="hidden py-3 md:hidden" data-mobile-nav-panel>
+      <ul class="space-y-2">
+        {
+          navItems.map((item) => {
+            const sectionCurrent = isSectionCurrent(item);
+
+            return (
+              <li>
+                {item.items?.length ? (
+                  <details class="group" open={sectionCurrent}>
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-3 border border-[var(--white)]/20 bg-[rgb(255_255_255_/_0.12)] px-4 py-3 text-sm uppercase tracking-[0.12em] text-[var(--white)] backdrop-blur-sm marker:content-none">
+                      <span class="min-w-0 flex-1 pr-2">{item.title}</span>
+                      <svg class="h-4 w-4 shrink-0 transition group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </summary>
+                    <ul class="mt-2 space-y-2 pl-4">
+                      <li>
+                        <a
+                          href={item.url}
+                          class:list={[
+                            "block border border-[var(--white)]/10 bg-[rgb(255_255_255_/_0.08)] px-4 py-2 text-sm text-[var(--white)]/78 transition",
+                            isCurrent(item.url) ? "bg-[rgb(255_255_255_/_0.18)] text-[var(--white)]" : "hover:bg-[rgb(255_255_255_/_0.14)] hover:text-[var(--white)]"
+                          ]}
+                        >
+                          {item.title}
+                        </a>
+                      </li>
+                      {item.items.map((subItem) => (
+                        <li>
+                          <a
+                            href={subItem.url}
+                            class:list={[
+                              "block border border-[var(--white)]/10 bg-[rgb(255_255_255_/_0.08)] px-4 py-2 text-sm text-[var(--white)]/78 transition",
+                              isCurrent(subItem.url) ? "bg-[rgb(255_255_255_/_0.18)] text-[var(--white)]" : "hover:bg-[rgb(255_255_255_/_0.14)] hover:text-[var(--white)]"
+                            ]}
+                          >
+                            {subItem.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : (
+                  <a
+                    href={item.url}
+                    class:list={[
+                      "block border border-[var(--white)]/20 bg-[rgb(255_255_255_/_0.12)] px-4 py-3 text-sm uppercase tracking-[0.12em] text-[var(--white)] transition backdrop-blur-sm",
+                      sectionCurrent ? "bg-[rgb(255_255_255_/_0.18)]" : "hover:bg-[rgb(255_255_255_/_0.16)]"
+                    ]}
+                  >
+                    {item.title}
+                  </a>
+                )}
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
   </div>
 </nav>
+
+<script>
+  const toggle = document.querySelector("[data-mobile-nav-toggle]");
+  const panel = document.querySelector("[data-mobile-nav-panel]");
+
+  if (toggle instanceof HTMLButtonElement && panel instanceof HTMLElement) {
+    const closeMenu = () => {
+      panel.classList.add("hidden");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      panel.classList.toggle("hidden", isOpen);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) {
+        closeMenu();
+      }
+    });
+
+    panel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+</script>

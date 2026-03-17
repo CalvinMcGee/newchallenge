@@ -41,8 +41,12 @@ const visiblePageTitle = pageTitle ?? site.title;
   </head>
   <body>
     <div class="site-shell">
-      <SiteHeader />
-      <SiteNav />
+      <div class="relative">
+        <div class="absolute inset-x-0 top-0 z-30">
+          <SiteNav />
+        </div>
+        <SiteHeader />
+      </div>
       <main class="flex-1 py-8">
         <div class="mx-auto w-full max-w-6xl px-2">
           <article>
