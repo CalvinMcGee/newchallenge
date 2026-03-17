@@ -1,5 +1,6 @@
 ---
 import ContactSection from "../components/ContactSection.astro";
+import FeatureSection from "../components/FeatureSection.astro";
 import { site } from "../config/site";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
@@ -10,6 +11,15 @@ interface Props {
   title?: string;
   frontmatter?: {
     title?: string;
+    feature?: {
+      title: string;
+      sections: Array<{
+        icon: "fa-mobile" | "fa-envelope-open-text" | "fa-user" | "fa-chalkboard-teacher";
+        title: string;
+        body: string;
+        url: string;
+      }>;
+    };
   };
 }
 
@@ -36,8 +46,9 @@ const visiblePageTitle = pageTitle ?? site.title;
       <main class="flex-1 py-8">
         <div class="mx-auto w-full max-w-6xl px-2">
           <article>
-            <h1 class="mb-6 text-center text-2xl font-semibold italic">{visiblePageTitle}</h1>
+            <h1 class="mb-6 text-center text-2xl font-semibold italic whitespace-pre-line">{visiblePageTitle}</h1>
             <slot />
+            {frontmatter?.feature && <FeatureSection feature={frontmatter.feature} />}
           </article>
         </div>
       </main>

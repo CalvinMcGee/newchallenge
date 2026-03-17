@@ -1,0 +1,62 @@
+---
+import { marked } from "marked";
+import Icon from "./Icon.astro";
+
+type IconName = "fa-mobile" | "fa-envelope-open-text" | "fa-user" | "fa-chalkboard-teacher";
+
+interface FeatureSectionItem {
+  icon: IconName;
+  title: string;
+  body: string;
+  url: string;
+}
+
+interface Feature {
+  title: string;
+  sections: FeatureSectionItem[];
+}
+
+interface Props {
+  feature: Feature;
+}
+
+const { feature } = Astro.props;
+---
+
+<section class="mt-24" aria-labelledby="feature-title">
+  <div class="mx-auto max-w-5xl px-5 py-5 md:px-8 md:py-6">
+    <h2 id="feature-title" class="mb-1 pb-1 text-center text-3xl font-normal text-[var(--text)] md:mb-1">
+      {feature.title}
+    </h2>
+
+    <div class="grid grid-cols-12 gap-4 md:gap-5">
+      {
+        feature.sections.map((section) => {
+          const sectionHtml = marked.parse(section.body) as string;
+
+          return (
+            <article class="col-span-12 flex h-full flex-col items-center bg-[var(--white)] p-2 text-center md:col-span-6 md:p-2">
+              <div class="mb-1 flex h-24 w-24 items-center justify-center text-[var(--primary)]">
+                <Icon name={section.icon} class="h-14 w-14" label={section.title} />
+              </div>
+
+              <h4 class="mb-1 text-2xl font-normal text-[var(--text)]">{section.title}</h4>
+
+              <div
+                class="mb-2 flex-1 text-center [&_p]:mb-3 [&_ul]:mb-3 [&_ul]:list-disc [&_ul]:list-inside"
+                set:html={sectionHtml}
+              ></div>
+
+              <a
+                class="inline-flex w-fit justify-center bg-[var(--primary)] px-4 py-2 font-normal text-[var(--white)]"
+                href={section.url}
+              >
+                {section.title}
+              </a>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
