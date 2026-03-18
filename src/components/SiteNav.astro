@@ -20,10 +20,10 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
 <nav class="bg-[linear-gradient(180deg,rgba(17,29,35,0.78)_0%,rgba(17,29,35,0.58)_68%,rgba(17,29,35,0)_100%)] text-[var(--white)]" aria-label="Main navigation">
   <div class="mx-auto w-full max-w-6xl px-2">
     <div class="flex items-center justify-between gap-4 py-3 md:hidden">
-      <a href="/" class="text-sm uppercase tracking-[0.2em] text-[var(--white)]/80">Meny</a>
+      <a href="/" class="text-sm uppercase tracking-[0.2em] text-[var(--white)]/88">Meny</a>
       <button
         type="button"
-        class="inline-flex h-11 w-11 items-center justify-center border border-[var(--white)]/35 bg-[var(--white)]/10 text-[var(--white)] backdrop-blur-sm"
+        class="inline-flex h-11 w-11 items-center justify-center border border-[rgb(255_255_255_/_0.48)] bg-[rgb(255_255_255_/_0.16)] text-[var(--white)] shadow-[0_10px_30px_rgba(17,29,35,0.18)] backdrop-blur-sm transition hover:bg-[rgb(255_255_255_/_0.24)]"
         aria-expanded="false"
         aria-controls="mobile-nav-panel"
         data-mobile-nav-toggle
@@ -88,7 +88,11 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
       </ul>
     </div>
 
-    <div id="mobile-nav-panel" class="hidden py-3 md:hidden" data-mobile-nav-panel>
+    <div
+      id="mobile-nav-panel"
+      class="hidden rounded-[1.5rem] border border-[rgb(255_255_255_/_0.7)] bg-[rgb(255_255_255_/_0.96)] p-3 text-[var(--text)] shadow-[0_20px_60px_rgba(17,29,35,0.2)] md:hidden"
+      data-mobile-nav-panel
+    >
       <ul class="m-0 list-none space-y-2 p-0">
         {
           navItems.map((item) => {
@@ -98,9 +102,9 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
               <li>
                 {item.items?.length ? (
                   <details class="group" open={sectionCurrent}>
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-3 border border-[var(--white)]/20 bg-[rgb(255_255_255_/_0.12)] px-4 py-3 text-sm uppercase tracking-[0.12em] text-[var(--white)] backdrop-blur-sm marker:content-none">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-[var(--surface-soft)] bg-[var(--white)] px-4 py-3 text-sm uppercase tracking-[0.12em] text-[var(--text)] shadow-[0_8px_24px_rgba(17,29,35,0.08)] marker:content-none">
                       <span class="min-w-0 flex-1 pr-2">{item.title}</span>
-                      <svg class="h-4 w-4 shrink-0 transition group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg class="h-4 w-4 shrink-0 text-[var(--primary)] transition group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
                       </svg>
                     </summary>
@@ -109,8 +113,10 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
                         <a
                           href={item.url}
                           class:list={[
-                            "block border border-[var(--white)]/10 bg-[rgb(255_255_255_/_0.08)] px-4 py-2 text-sm text-[var(--white)]/78 transition",
-                            isCurrent(item.url) ? "bg-[rgb(255_255_255_/_0.18)] text-[var(--white)]" : "hover:bg-[rgb(255_255_255_/_0.14)] hover:text-[var(--white)]"
+                            "block rounded-xl border border-[var(--surface-soft)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)] transition",
+                            isCurrent(item.url)
+                              ? "border-[var(--primary)]/20 bg-[var(--surface-soft)] text-[var(--text)]"
+                              : "hover:border-[var(--primary)]/20 hover:bg-[var(--surface-soft)] hover:text-[var(--text)]"
                           ]}
                         >
                           {item.title}
@@ -121,11 +127,13 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
                           <a
                             href={subItem.url}
                             class:list={[
-                              "block border border-[var(--white)]/10 bg-[rgb(255_255_255_/_0.08)] px-4 py-2 text-sm text-[var(--white)]/78 transition",
-                              isCurrent(subItem.url) ? "bg-[rgb(255_255_255_/_0.18)] text-[var(--white)]" : "hover:bg-[rgb(255_255_255_/_0.14)] hover:text-[var(--white)]"
-                            ]}
-                          >
-                            {subItem.title}
+                               "block rounded-xl border border-[var(--surface-soft)] bg-[var(--surface)] px-4 py-2 text-sm text-[var(--muted)] transition",
+                               isCurrent(subItem.url)
+                                 ? "border-[var(--primary)]/20 bg-[var(--surface-soft)] text-[var(--text)]"
+                                 : "hover:border-[var(--primary)]/20 hover:bg-[var(--surface-soft)] hover:text-[var(--text)]"
+                             ]}
+                           >
+                             {subItem.title}
                           </a>
                         </li>
                       ))}
@@ -135,11 +143,13 @@ const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.s
                   <a
                     href={item.url}
                     class:list={[
-                      "block border border-[var(--white)]/20 bg-[rgb(255_255_255_/_0.12)] px-4 py-3 text-sm uppercase tracking-[0.12em] text-[var(--white)] transition backdrop-blur-sm",
-                      sectionCurrent ? "bg-[rgb(255_255_255_/_0.18)]" : "hover:bg-[rgb(255_255_255_/_0.16)]"
-                    ]}
-                  >
-                    {item.title}
+                       "block rounded-2xl border border-[var(--surface-soft)] bg-[var(--white)] px-4 py-3 text-sm uppercase tracking-[0.12em] text-[var(--text)] shadow-[0_8px_24px_rgba(17,29,35,0.08)] transition",
+                       sectionCurrent
+                         ? "border-[var(--primary)]/20 bg-[var(--surface-soft)]"
+                         : "hover:border-[var(--primary)]/20 hover:bg-[var(--surface-soft)]"
+                     ]}
+                   >
+                     {item.title}
                   </a>
                 )}
               </li>
