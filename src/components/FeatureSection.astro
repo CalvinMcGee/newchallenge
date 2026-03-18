@@ -29,13 +29,13 @@ const { feature } = Astro.props;
       {feature.title}
     </h2>
 
-    <div class="grid grid-cols-12 gap-4 md:gap-5">
+    <div class="grid gap-4 md:grid-cols-2 md:gap-5">
       {
         feature.sections.map((section) => {
           const sectionHtml = marked.parse(section.body) as string;
 
           return (
-            <article class="col-span-12 flex h-full flex-col items-center bg-[var(--white)] p-2 text-center md:col-span-6 md:p-2">
+            <article class="flex h-full flex-col items-center bg-[var(--white)] p-2 text-center">
               <div class="mb-1 flex h-24 w-24 items-center justify-center text-[var(--primary)]">
                 <Icon name={section.icon} class="h-14 w-14" label={section.title} />
               </div>
