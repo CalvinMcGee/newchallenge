@@ -35,7 +35,7 @@ const { feature } = Astro.props;
           const sectionHtml = marked.parse(section.body) as string;
 
           return (
-            <article class="flex h-full flex-col items-center bg-[var(--white)] p-2 text-center">
+            <article class="flex h-full flex-col items-center bg-[var(--white)] p-4 text-center">
               <div class="mb-1 flex h-24 w-24 items-center justify-center text-[var(--primary)]">
                 <Icon name={section.icon} class="h-14 w-14" label={section.title} />
               </div>
