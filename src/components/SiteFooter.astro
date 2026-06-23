@@ -9,22 +9,22 @@ const footerHtml = marked.parse(site.footer.text) as string;
 <footer class="site-footer">
   <div class="bg-[var(--secondary)] text-[var(--footer-text)] [&_a]:text-[var(--footer-text)] [&_a:focus]:text-[var(--footer-text)] [&_a:hover]:text-[var(--footer-text)]">
     <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 px-2 py-6 md:grid-cols-3">
-      <section>
+      <section class="md:col-start-1 md:col-end-3">
         <h4 class="text-[var(--white)]">{ site.title }</h4>
         <Fragment set:html={footerHtml} />
       </section>
-      <section>
+      <section class="md:col-start-3">
         <h4 class="text-[var(--white)]">{ site.footer.contact }</h4>
         <p class="flex items-center gap-4"><Icon name="fa-mobile" class="h-7 w-7 text-[var(--footer-bg-dark)]" /><a href={`tel:${site.phone_short}`}>{ site.phone }</a></p>
         <p class="flex items-center gap-4"><Icon name="fa-envelope-open-text" class="h-7 w-7 text-[var(--footer-bg-dark)]" /><a href={`mailto:${site.email}`}>{ site.email }</a></p>
       </section>
-      <section>
+      {/*<section>
         <h4 class="text-[var(--white)]">{ site.footer.instagram.title }</h4>
         <p>
           Placeholder paragraph content for the third footer column with a
           <a href="#">placeholder link</a>.
         </p>
-      </section>
+      </section>*/}
     </div>
   </div>
   <div class="bg-[var(--footer-bg-dark)] text-[var(--footer-text-dark)] [&_a]:text-[var(--footer-text-dark)] [&_a:focus]:text-[var(--footer-text-dark)] [&_a:hover]:text-[var(--footer-text-dark)]">
