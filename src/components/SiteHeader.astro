@@ -1,23 +1,21 @@
 ---
 import { Image } from "astro:assets";
 import { site } from "../config/site";
+import headerImage from "../assets/header.jpg";
 import logo from "../assets/logo_v2.webp";
 ---
 
 <header class="relative overflow-hidden">
-  <picture aria-hidden="true">
-    <source srcset="/img/header.webp" type="image/webp" />
-    <img
-      src="/img/header.jpg"
-      alt=""
-      width="1920"
-      height="1080"
-      fetchpriority="high"
-      loading="eager"
-      decoding="async"
-      class="absolute inset-0 -z-10 h-full w-full object-cover"
-    />
-  </picture>
+  <Image
+    src={headerImage}
+    widths={[768, 1280, 1920]}
+    sizes="100vw"
+    alt=""
+    aria-hidden="true"
+    fetchpriority="high"
+    loading="eager"
+    class="absolute inset-0 -z-10 h-full w-full object-cover"
+  />
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-black/10"></div>
   <div class="mx-auto flex min-h-[50vh] w-full max-w-6xl flex-col items-center justify-center gap-6 px-2 pb-10 pt-28 md:gap-8 md:pb-14 md:pt-36">
     <div class="flex w-full justify-center">
