@@ -5,21 +5,21 @@ import headerImage from "../assets/header.jpg";
 import logo from "../assets/logo_v2.webp";
 ---
 
-<header class="relative overflow-hidden">
+<header class="site-header-shell relative overflow-hidden">
   <Image
     src={headerImage}
-    widths={[768, 1280, 1920]}
+    widths={[480, 640, 768, 1280, 1920]}
     sizes="100vw"
     alt=""
     aria-hidden="true"
     fetchpriority="high"
     loading="eager"
-    class="absolute inset-0 -z-10 h-full w-full object-cover"
+    class="site-header-image absolute inset-0 -z-10 h-full w-full object-cover"
   />
-  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-black/10"></div>
-  <div class="mx-auto flex min-h-[50vh] w-full max-w-6xl flex-col items-center justify-center gap-6 px-2 pb-10 pt-28 md:gap-8 md:pb-14 md:pt-36">
+  <div aria-hidden="true" class="site-header-overlay absolute inset-0 -z-10 bg-black/10"></div>
+  <div class="site-header-content mx-auto flex min-h-[50vh] w-full max-w-6xl flex-col items-center justify-center gap-6 px-2 pb-10 pt-28 md:gap-8 md:pb-14 md:pt-36">
     <div class="flex w-full justify-center">
-      <a href="/" aria-label="Till startsidan" class="block w-7/12 md:w-5/12 lg:w-4/12">
+      <a href="/" aria-label="Till startsidan" class="site-header-logo-link block w-7/12 md:w-5/12 lg:w-4/12">
         <Image
           src={logo}
           widths={[480, 988]}
@@ -29,7 +29,7 @@ import logo from "../assets/logo_v2.webp";
         />
       </a>
     </div>
-    <div class="flex flex-col items-center gap-2 text-center text-[var(--white)]">
+    <div class="site-header-copy flex flex-col items-center gap-2 text-center text-[var(--white)]">
       <h2 class="text-3xl font-semibold italic md:text-3xl">{site.header.title}</h2>
       <h2 class="text-3xl font-semibold italic md:text-3xl">{site.header.subtitle}</h2>
     </div>

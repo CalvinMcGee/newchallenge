@@ -17,7 +17,7 @@ const isCurrent = (url: string) => url !== "#kontakt" && currentPath === url;
 const isSectionCurrent = (item: NavItem) => isCurrent(item.url) || item.items?.some((subItem) => isCurrent(subItem.url));
 ---
 
-<nav class="bg-[linear-gradient(180deg,rgba(17,29,35,0.78)_0%,rgba(17,29,35,0.58)_68%,rgba(17,29,35,0)_100%)] text-[var(--white)]" aria-label="Main navigation">
+<nav class="site-nav-shell bg-[linear-gradient(180deg,rgba(17,29,35,0.78)_0%,rgba(17,29,35,0.58)_68%,rgba(17,29,35,0)_100%)] text-[var(--white)]" aria-label="Main navigation">
   <div class="mx-auto w-full max-w-6xl px-2">
     <div class="flex items-center justify-between gap-4 py-3 md:hidden">
       <a href="/" class="text-sm uppercase tracking-[0.2em] text-[var(--white)]/88">Meny</a>
