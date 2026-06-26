@@ -7,13 +7,14 @@ import { site } from "../config/site";
 const contactHtml = marked.parse(site.contact.text) as string;
 const parallaxGolfWebp = await getImage({ src: parallaxGolf, width: 1600, format: "webp" });
 const parallaxGolfJpg = await getImage({ src: parallaxGolf, width: 1600, format: "jpg" });
-const parallaxBackground = `background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('${parallaxGolfJpg.src}'); background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), image-set(url('${parallaxGolfWebp.src}') type('image/webp') 1x, url('${parallaxGolfJpg.src}') type('image/jpeg') 1x);`;
 ---
 
 <section id="kontakt" aria-labelledby="contact-title">
   <div
+    data-contact-background
+    data-background-webp={parallaxGolfWebp.src}
+    data-background-jpg={parallaxGolfJpg.src}
     class="bg-cover bg-center bg-no-repeat md:bg-fixed"
-    style={parallaxBackground}
   >
     <div>
       <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-2 py-10 md:grid-cols-2 md:gap-10 md:py-14">
@@ -93,6 +94,43 @@ const parallaxBackground = `background-image: linear-gradient(rgba(0,0,0,0.2), r
   <script is:inline>
     (() => {
       const form = document.getElementById("contact-form");
+      const backgroundHost = document.querySelector("[data-contact-background]");
+
+      const activateBackground = () => {
+        if (!(backgroundHost instanceof HTMLElement) || backgroundHost.dataset.backgroundLoaded === "true") {
+          return;
+        }
+
+        const webp = backgroundHost.dataset.backgroundWebp;
+        const jpg = backgroundHost.dataset.backgroundJpg;
+
+        if (!webp || !jpg) {
+          return;
+        }
+
+        backgroundHost.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), image-set(url('${webp}') type('image/webp') 1x, url('${jpg}') type('image/jpeg') 1x)`;
+        backgroundHost.dataset.backgroundLoaded = "true";
+      };
+
+      if (backgroundHost instanceof HTMLElement) {
+        if (!("IntersectionObserver" in window)) {
+          activateBackground();
+        } else {
+          const backgroundObserver = new IntersectionObserver(
+            (entries) => {
+              if (!entries.some((entry) => entry.isIntersecting)) {
+                return;
+              }
+
+              activateBackground();
+              backgroundObserver.disconnect();
+            },
+            { rootMargin: "200px 0px" }
+          );
+
+          backgroundObserver.observe(backgroundHost);
+        }
+      }
 
       if (!form) {
         return;
