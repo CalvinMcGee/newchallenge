@@ -23,7 +23,15 @@ const contactHtml = marked.parse(site.contact.text) as string;
           <h2 class="bg-[var(--warning)] px-6 py-6 text-4xl text-center text-black md:px-8">
             {site.contact.title}
           </h2>
-          <form class="space-y-4 px-6 py-6 md:px-8 md:py-8" method="post" action="/success" aria-label="Kontaktformulär" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+          <form
+            id="contact-form"
+            class="space-y-4 px-6 py-6 md:px-8 md:py-8"
+            method="POST"
+            action="/success"
+            aria-label="Kontaktformulär"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+          >
             <div>
               <label class="mb-1 block text-sm font-semibold text-[var(--text)]" for="contact-name">Namn</label>
               <input
@@ -51,10 +59,10 @@ const contactHtml = marked.parse(site.contact.text) as string;
             </div>
 
             <div>
-              <label class="mb-1 block text-sm font-semibold text-[var(--text)]" for="contact-message">Meddelande</label>
+              <label class="mb-1 block text-sm font-semibold text-[var(--text)]" for="message">Meddelande</label>
               <textarea
                 class="min-h-36 w-full rounded-md border border-[var(--border)] bg-[var(--white)] px-3 py-2 text-[var(--text)] focus:border-[var(--secondary)] focus:outline-none"
-                id="text"
+                id="message"
                 name="text"
                 placeholder="Meddelande"
                 required
