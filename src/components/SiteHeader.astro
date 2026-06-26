@@ -2,10 +2,21 @@
 import { site } from "../config/site";
 ---
 
-<header
-  class="bg-cover bg-center bg-no-repeat"
-  style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('/img/header.jpg'); background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), image-set(url('/img/header.webp') type('image/webp') 1x, url('/img/header.jpg') type('image/jpeg') 1x);"
->
+<header class="relative overflow-hidden">
+  <picture aria-hidden="true">
+    <source srcset="/img/header.webp" type="image/webp" />
+    <img
+      src="/img/header.jpg"
+      alt=""
+      width="1920"
+      height="1080"
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+    />
+  </picture>
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-black/10"></div>
   <div class="mx-auto flex min-h-[50vh] w-full max-w-6xl flex-col items-center justify-center gap-6 px-2 pb-10 pt-28 md:gap-8 md:pb-14 md:pt-36">
     <div class="flex w-full justify-center">
       <a href="/" aria-label="Till startsidan" class="block w-7/12 md:w-5/12 lg:w-4/12">
