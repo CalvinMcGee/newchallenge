@@ -1,14 +1,19 @@
 ---
+import { getImage } from "astro:assets";
 import { marked } from "marked";
+import parallaxGolf from "../assets/parallax_golf.jpg";
 import { site } from "../config/site";
 
 const contactHtml = marked.parse(site.contact.text) as string;
+const parallaxGolfWebp = await getImage({ src: parallaxGolf, width: 1600, format: "webp" });
+const parallaxGolfJpg = await getImage({ src: parallaxGolf, width: 1600, format: "jpg" });
+const parallaxBackground = `background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('${parallaxGolfJpg.src}'); background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), image-set(url('${parallaxGolfWebp.src}') type('image/webp') 1x, url('${parallaxGolfJpg.src}') type('image/jpeg') 1x);`;
 ---
 
 <section id="kontakt" aria-labelledby="contact-title">
   <div
     class="bg-cover bg-center bg-no-repeat md:bg-fixed"
-    style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/img/parallax_golf.jpg'); background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), image-set(url('/img/parallax_golf.webp') type('image/webp') 1x, url('/img/parallax_golf.jpg') type('image/jpeg') 1x);"
+    style={parallaxBackground}
   >
     <div>
       <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-2 py-10 md:grid-cols-2 md:gap-10 md:py-14">
