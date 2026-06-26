@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { site } from "../config/site";
+import logo from "../assets/logo_v2.webp";
 ---
 
 <header class="relative overflow-hidden">
@@ -20,16 +22,13 @@ import { site } from "../config/site";
   <div class="mx-auto flex min-h-[50vh] w-full max-w-6xl flex-col items-center justify-center gap-6 px-2 pb-10 pt-28 md:gap-8 md:pb-14 md:pt-36">
     <div class="flex w-full justify-center">
       <a href="/" aria-label="Till startsidan" class="block w-7/12 md:w-5/12 lg:w-4/12">
-        <picture>
-          <source srcset="/img/logo_v2.webp" type="image/webp" />
-          <img
-            src="/img/logo_v2.png"
-            alt="New Challenge"
-            width="360"
-            height="111"
-            class="h-auto w-full"
-          />
-        </picture>
+        <Image
+          src={logo}
+          widths={[480, 988]}
+          sizes="(min-width: 1024px) 24vw, (min-width: 768px) 33vw, 58vw"
+          alt="New Challenge"
+          class="h-auto w-full"
+        />
       </a>
     </div>
     <div class="flex flex-col items-center gap-2 text-center text-[var(--white)]">
